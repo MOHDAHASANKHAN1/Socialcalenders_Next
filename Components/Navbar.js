@@ -3,7 +3,7 @@ import Link from "next/link";
 function Navbar() {
     return (
         <>
-            <div className="bg-nav px-5">
+            <div className="bg-nav px-2">
                 <br />
                 <nav class="navbar navbar-expand-sm navbar-light relat" aria-label="Third navbar example">
                     <div class="container-fluid"><Link href="/">
