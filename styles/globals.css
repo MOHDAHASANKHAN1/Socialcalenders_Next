@@ -22,6 +22,23 @@ a {
 .banner-color{
   background-color: #6b88ba;
 }
+.Affiliate-color1{
+  background-color: #ff644e;
+}
+
+.Affiliate-color2{
+  background-color: #f2f2f2;
+}
+
+.Affiliatedivfirst{
+  width: 20rem;
+  height: 20rem;
+}
+
+.Affiliatedivsecond{
+  width: 10rem;
+  height: 10rem;
+}
 
 .contact-color{
   background-color: #fedfda;
