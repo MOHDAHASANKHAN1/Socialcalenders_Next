@@ -4,7 +4,7 @@ function All_Industries() {
     return (
         <>
             <br /><br /><br />
-            <div className="row g-0 px-5">
+            <div className="row g-0 px-4">
                 <div className="px-2">
                     <h1><b>Industries</b></h1>
                 </div>
