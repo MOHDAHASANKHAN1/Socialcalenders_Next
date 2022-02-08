@@ -114,8 +114,8 @@ function Footer() {
                 />
                 <p><i class="fas fa-home mr-3"></i> Utter Pradesh, Mohanlal Ganj, India</p>
                 <p><i class="fas fa-envelope mr-3"></i> aimtahsankhan@gmail.com</p>
-                <p><i class="fas fa-phone mr-3"></i> + 91 9918423716</p>
-                <p><i class="fas fa-print mr-3"></i> + 91 9918423716</p>
+                <p><i class="fas fa-phone mr-3"></i> + 91 99 18 42 37 16</p>
+                <p><i class="fas fa-print mr-3"></i> + 91 99 18 42 37 16</p>
               </div>
 
             </div>
