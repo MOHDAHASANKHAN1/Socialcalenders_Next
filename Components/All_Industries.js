@@ -9,7 +9,7 @@ function All_Industries() {
                     <h1><b>Industries</b></h1>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Beuty">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -22,7 +22,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Bussiness">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -35,7 +35,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Cars">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -48,7 +48,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Climate">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -61,7 +61,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Coaching">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -74,7 +74,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Crpyto">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -87,7 +87,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Diy">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -100,7 +100,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Education">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -113,7 +113,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Empowerment">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -126,7 +126,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Events">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -139,7 +139,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Fashion">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -152,7 +152,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Finance">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -165,7 +165,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Fitness">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -178,7 +178,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Floral">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -192,7 +192,7 @@ function All_Industries() {
                 </div>
 
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Food">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -205,7 +205,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Gadering">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -218,7 +218,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Happiness">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -231,7 +231,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Health">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -244,7 +244,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Holiday">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -257,7 +257,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Home">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -270,7 +270,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Lifestyle">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -283,7 +283,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Love">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -296,7 +296,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Marketing">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -309,7 +309,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Motivation">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -322,7 +322,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Music">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -335,7 +335,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Nutrition">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -348,7 +348,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Pets">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -361,7 +361,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Podcast">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -374,7 +374,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Real-Estate">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -387,7 +387,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Services">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -400,7 +400,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Social">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -413,7 +413,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Spa">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -426,7 +426,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Sports">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -439,7 +439,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Tatto">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -452,7 +452,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Therapy">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -465,7 +465,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Travel">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -478,7 +478,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Universal">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -491,7 +491,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Wedding">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -504,7 +504,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Wellness">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
@@ -517,7 +517,7 @@ function All_Industries() {
                     </Link>
                 </div>
 
-                <div className="col-sm-6 col-12 col-md-3 pt-4 d-flex justify-content-center">
+                <div className="col-sm-4 pt-4 d-flex justify-content-center">
                     <Link href="/Products-By-Category/All-Products/Women">
                         <a>
                             <div class="card" style={{ width: "18rem" }}>
