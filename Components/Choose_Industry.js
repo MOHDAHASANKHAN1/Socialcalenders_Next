@@ -93,7 +93,7 @@ function Choose_Industry() {
                                 <Link href="/Products-By-Category/All-Products/Real-Estate">
                                     <a>
                                         <div className="card">
-                                            <div className="img-wrapper"><img src="/Real-State.png" className="d-block w-100" alt="..." /> </div>
+                                            <div className="img-wrapper"><img src="/Real-Estate.png" className="d-block w-100" alt="..." /> </div>
                                             <div className="card-body">
                                                 <h5 className="card-title">Estate</h5>
                                             </div>
