@@ -54,11 +54,13 @@ export default function Contact() {
         <br />
         <p className="text-center">Social media is a visual experience, and our dedicated team of world-class graphic designers will do their best to give you access to fresh and up-to-date social media templates that will guarantee you success.</p>
         <br />
+        
         <h1 className="text-center"><b>Have a question?</b></h1>
         <br />
         <h6 className="text-center">Send your message to us with this from.</h6>
         <br />
-        <div id="bod" class=" container-fluid mb-0 my-0 mt-0 mx-0">
+      </div>
+      <div id="bod" class=" container-fluid mb-0 my-0 mt-0 mx-0">
           <div class="contact-form">
             <h1>Contact Us</h1>
             <hr />
@@ -87,7 +89,6 @@ export default function Contact() {
           </div>
         </div>
         <br /><br /><br /><br /><br /><br />
-      </div>
     </>
   );
 }
