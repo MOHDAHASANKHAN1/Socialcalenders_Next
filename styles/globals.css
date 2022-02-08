@@ -31,6 +31,10 @@ a {
   background-color: #ffeab9;
 }
 
+.industry{
+ padding-left: 2.5%;
+}
+
 .footers{
   width: 60px;
   background-color: #7c4dff;
@@ -166,6 +170,10 @@ hr {
   .category{
   padding-left: 3%;
   padding-top: 2.5%;
+}
+
+.industry{
+ padding-left: 12.5%;
 }
 
 }
