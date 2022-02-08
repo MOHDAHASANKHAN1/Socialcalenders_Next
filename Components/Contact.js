@@ -58,7 +58,8 @@ export default function Contact() {
         <br />
         <h6 className="text-center">Send your message to us with this from.</h6>
         <br />
-        <div id="bod" class=" container-fluid mb-0 my-0 mt-0 mx-0">
+      </div>
+      <div id="bod" class=" container-fluid mb-0 my-0 mt-0 mx-0">
           <div class="contact-form">
             <h1>Contact Us</h1>
             <hr />
@@ -87,7 +88,6 @@ export default function Contact() {
           </div>
         </div>
         <br /><br /><br /><br /><br /><br />
-      </div>
     </>
   );
 }
