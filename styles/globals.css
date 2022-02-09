@@ -16,6 +16,11 @@ a {
   text-decoration: none;
 }
 
+.About{
+ width: 16rem;
+ 
+}
+
 .bg-nav{
     background-color: #e5f0ff;
 }

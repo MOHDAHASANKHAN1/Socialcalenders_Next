@@ -5,7 +5,7 @@ function About_Us_Home() {
         <><br /><br /><br /><br /><br />
             <div className="row g-0">
                 <div className="col-sm-6 d-flex align-items-center justify-content-center">
-                    <div className="">
+                    <div className="About">
                         <img src="/Aboutus.png" className="img-fluid " alt="/" />
                     </div>
                 </div>
