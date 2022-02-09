@@ -45,6 +45,66 @@ a {
   height: 10rem;
 }
 
+.Affiliatedivthird{
+  width: 15rem;
+  height: 15rem;
+}
+
+.Affiliatedivfourth{
+  width: 45rem;
+  height: auto;
+}
+
+.frequently-asked-questions-color{
+background-color: #e0e0e0;
+}
+
+
+.accordion-collapse {
+    border: 0;
+}
+.accordion-button {
+    padding: 0px;
+    font-weight: bold;
+    border: 0;
+    font-size: 18px;
+    color: #333333;
+    text-align: left;
+    border-bottom: 1px solid #ddd; 
+}
+.accordion-button:focus {
+    box-shadow: none;
+    border: none;
+}
+.accordion-button:not(.collapsed) {
+    background: none;
+    color: #dc3545;
+}
+.accordion-body {
+    padding: 15px;
+    background-color: #f6f6f6;
+}
+.accordion-button::after {
+    width: auto;
+    height: auto;
+    content: "+";
+    font-size: 40px;
+    background-image: none;
+    font-weight: 100;
+    color: #1b6ce5;
+    transform: translateY(-4px);
+}
+.accordion-button:not(.collapsed)::after {
+    width: auto;
+    height: auto;
+    background-image: none;
+    content: "-";
+    font-size: 48px;
+    transform: translate(-5px, -4px);
+    transform: rotate(0deg);
+}
+
+
 .contact-color{
   background-color: #fedfda;
 }
