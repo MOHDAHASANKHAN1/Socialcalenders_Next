@@ -338,6 +338,9 @@ hr {
 }
 /*contact_css_end*/
 
+.resp{
+  padding-bottom: 10px;
+}
 
 @media (min-width: 1076px) and (max-width: 1399px){
 .heading{
@@ -359,6 +362,9 @@ hr {
 }
 .res{
 padding: 1.25%;
+}
+.resp{
+  padding-bottom: 21.50%;
 }
 }
 
@@ -400,6 +406,23 @@ padding: 2.50%;
 .res{
 padding: 2.50%;
 }
+.rating2>label:before {
+    margin: 5px;
+    font-size: 0.75em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+.rating>label:before {
+    margin: 5px;
+    font-size: 1.75em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+.rp{
+  font-size: 1em;
+}
 }
 
 @media (min-width: 576px) and (max-width: 675px) {
@@ -415,6 +438,23 @@ padding: 2.50%;
   }
 .res{
 padding: 2.50%;
+}
+.rating2>label:before {
+    margin: 5px;
+    font-size: 1em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+.rating>label:before {
+    margin: 5px;
+    font-size: 1.75em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+.rp{
+  font-size: 1em;
 }
 }
 
