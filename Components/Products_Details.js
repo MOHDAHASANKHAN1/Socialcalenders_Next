@@ -66,7 +66,7 @@ function Products_Details() {
                     <div className="col-sm-6">
                         <div className="row gx-0 gy-0">
                             <div className="col-sm-2 col-2">
-                                <div className="row gx-0 gy-1">
+                                <div className="row gx-0 gy-2">
 
                                     <div className="col-sm-12 d-flex align-items-center justify-content-center">
                                         <img src="/Pd.png" className="img-fluid image-change w-50 border border-primary rounded-3 p-2" alt="/" />
@@ -186,7 +186,7 @@ function Products_Details() {
                     <div className="row gy-0 gx-0 justify-content-around">
 
                         <div className="col-sm-6 res">
-                            <div className='Pdbg rounded-3 resp'>
+                            <div className='Pdbg rounded-3 px-4 pt-4 resp'>
                                 <h4><b>Why use ready-made templates?</b></h4>
                                 <br />
                                 <h5><b>Why Are Ready-made Templates An Excellent Investment?</b></h5>

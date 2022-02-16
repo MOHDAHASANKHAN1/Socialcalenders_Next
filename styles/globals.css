@@ -294,19 +294,13 @@ background-color: #e0e0e0;
   padding-left: 10%;
   padding-right: 10%;
 }
-}
-
 .res{
 padding: 1.25%;
 }
-
 .resp{
   padding-bottom: 51.50%;
-  padding-left: 2%;
-  padding-top: 2%;
-  padding-right: 2%;
 }
-
+}
 
 /*contact_css_start*/
 .centre {
@@ -363,6 +357,9 @@ hr {
 .nav-item{
   padding-left: 7.5%;
 }
+.res{
+padding: 1.25%;
+}
 }
 
 @media (min-width: 876px) and (max-width: 1075px){
@@ -379,6 +376,9 @@ hr {
 .cards-s {
   width: 20rem;
   height: 20rem;
+}
+.res{
+padding: 2.50%;
 }
 }
 
@@ -397,6 +397,9 @@ hr {
   width: 20rem;
   height: 20rem;
 }
+.res{
+padding: 2.50%;
+}
 }
 
 @media (min-width: 576px) and (max-width: 675px) {
@@ -410,7 +413,9 @@ hr {
 .subheading{
     font-size: 35%;
   }
-
+.res{
+padding: 2.50%;
+}
 }
 
 @media (max-width: 575px) {
@@ -425,7 +430,9 @@ hr {
 .industry{
  padding-left: 12.5%;
 }
-
+.res{
+padding: 5%;
+}
 }
 
 .img-wrapper-s{
