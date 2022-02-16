@@ -290,7 +290,23 @@ background-color: #e0e0e0;
 .nav-item{
   padding-left: 15%;
 }
+.ress{
+  padding-left: 10%;
+  padding-right: 10%;
 }
+}
+
+.res{
+padding: 1.25%;
+}
+
+.resp{
+  padding-bottom: 51.50%;
+  padding-left: 2%;
+  padding-top: 2%;
+  padding-right: 2%;
+}
+
 
 /*contact_css_start*/
 .centre {

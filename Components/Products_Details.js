@@ -60,9 +60,9 @@ function Products_Details() {
         <>
             <br />
             <div className="container-fluid">
-                <h6 className='text-muted'>Templates / 200 Local Store Owner Templates for Social Media</h6>
+                <h6 className='text-muted  ress'>Templates / 200 Local Store Owner Templates for Social Media</h6>
                 <br />
-                <div className="row g-0 justify-content-around">
+                <div className="row g-0 justify-content-around  ress">
                     <div className="col-sm-6">
                         <div className="row gx-0 gy-0">
                             <div className="col-sm-2 col-2">
@@ -87,7 +87,7 @@ function Products_Details() {
                                 </div>
                             </div>
                             <div className="col-sm-10 col-10 d-flex align-items-center justify-content-center">
-                                <div d-flex className='d-flex align-items-center justify-content-center w-50'>
+                                <div d-flex className='d-flex align-items-center justify-content-center w-75'>
                                     <img src="/Pd.png" className="img-fluid" id='main-image' alt="/" />
                                 </div>
                             </div>
@@ -185,8 +185,8 @@ function Products_Details() {
                 <div className="container-fluid">
                     <div className="row gy-0 gx-0 justify-content-around">
 
-                        <div className="col-sm-6 p-4">
-                            <div className='Pdbg rounded-3 p-4'>
+                        <div className="col-sm-6 res">
+                            <div className='Pdbg rounded-3 resp'>
                                 <h4><b>Why use ready-made templates?</b></h4>
                                 <br />
                                 <h5><b>Why Are Ready-made Templates An Excellent Investment?</b></h5>
@@ -212,12 +212,10 @@ function Products_Details() {
                                     <li className='text-muted'>Step 2. (optional) Edit the templates how you see fit.</li>
                                     <li className='text-muted'>Step 3. Download the templates from Canva and enjoy results (better reach, more followers, higher engagement and more sales.)</li>
                                 </ul>
-                                <p className='text-white h6'>/</p>
-                                <br /><br /><br /><br /><br /><br /><br /><br />
                             </div>
                         </div>
 
-                        <div className="col-sm-6 p-4">
+                        <div className="col-sm-6 res">
                             <div className='Pdbg rounded-3 p-4'>
                                 <h4><b>How to get started</b></h4>
                                 <br />
