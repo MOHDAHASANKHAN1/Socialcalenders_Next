@@ -338,10 +338,6 @@ hr {
 }
 /*contact_css_end*/
 
-.resp{
-  padding-bottom: 10px;
-}
-
 @media (min-width: 1076px) and (max-width: 1399px){
 .heading{
     font-size: 150%;
@@ -386,6 +382,10 @@ padding: 1.25%;
 .res{
 padding: 2.50%;
 }
+
+.resp{
+  padding-bottom: 10px;
+}
 }
 
 @media (min-width: 676px) and (max-width: 875px) {
@@ -423,6 +423,10 @@ padding: 2.50%;
 .rp{
   font-size: 1em;
 }
+
+.resp{
+  padding-bottom: 10px;
+}
 }
 
 @media (min-width: 576px) and (max-width: 675px) {
@@ -436,9 +440,6 @@ padding: 2.50%;
 .subheading{
     font-size: 35%;
   }
-.res{
-padding: 2.50%;
-}
 .rating2>label:before {
     margin: 5px;
     font-size: 1em;
@@ -456,6 +457,12 @@ padding: 2.50%;
 .rp{
   font-size: 1em;
 }
+.res{
+padding: 2%;
+}
+.resp{
+  padding-bottom: 10px;
+}
 }
 
 @media (max-width: 575px) {
@@ -469,9 +476,6 @@ padding: 2.50%;
 
 .industry{
  padding-left: 12.5%;
-}
-.res{
-padding: 5%;
 }
 
 .rating2>label:before {
@@ -490,6 +494,9 @@ padding: 5%;
 }
 .rp{
   font-size: 1em;
+}
+.resp{
+  padding-bottom: 10px;
 }
 }
 
