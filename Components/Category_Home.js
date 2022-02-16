@@ -16,7 +16,7 @@ function Category_Home() {
                     </div>
 
                     <div className="col-sm-4 p-4">
-                        <Link href="/Products-By-Category/Templates">
+                        <Link href="/Products/Templates">
                             <a className="d-flex">
                                 <img src="/Category_1.png" className="img-fluid " alt="/" />
                                 <div className="position-absolute category">
@@ -28,7 +28,7 @@ function Category_Home() {
                     </div>
 
                     <div className="col-sm-4 p-4">
-                        <Link href="/Products-By-Category/Email-Marketing">
+                        <Link href="/Products/Email-Marketing">
                             <a className="d-flex">
                                 <img src="/Category_2.png" className="img-fluid " alt="/" />
                                 <div className="position-absolute category">
@@ -40,7 +40,7 @@ function Category_Home() {
                     </div>
 
                     <div className="col-sm-4 p-4">
-                        <Link href="/Products-By-Category/Books">
+                        <Link href="/Products/Books">
                             <a className="d-flex">
                                 <img src="/Category_3.png" className="img-fluid " alt="/" />
                                 <div className="position-absolute category">
@@ -52,7 +52,7 @@ function Category_Home() {
                     </div>
 
                     <div className="col-sm-3 p-4">
-                        <Link href="/Products-By-Category/Calenders">
+                        <Link href="/Products/Calenders">
                             <a className="d-flex">
                                 <img src="/Category_4.png" className="img-fluid " alt="/" />
                                 <div className="position-absolute category">
@@ -62,7 +62,7 @@ function Category_Home() {
                         </Link>
                     </div>
                     <div className="col-sm-3 p-4">
-                        <Link href="/Products-By-Category/Challenges">
+                        <Link href="/Products/Challenges">
                             <a className="d-flex">
                                 <img src="/Category_5.png" className="img-fluid " alt="/" />
                                 <div className="position-absolute category">
@@ -72,7 +72,7 @@ function Category_Home() {
                         </Link>
                     </div>
                     <div className="col-sm-3 p-4">
-                        <Link href="/Products-By-Category/Covers">
+                        <Link href="/Products/Covers">
                             <a className="d-flex">
                                 <img src="/Category_6.png" className="img-fluid " alt="/" />
                                 <div className="position-absolute category">
@@ -82,7 +82,7 @@ function Category_Home() {
                         </Link>
                     </div>
                     <div className="col-sm-3 p-4">
-                        <Link href="/Products-By-Category/Courses">
+                        <Link href="/Products/Courses">
                             <a className="d-flex">
                                 <img src="/Category_7.png" className="img-fluid " alt="/" />
                                 <div className="position-absolute category">

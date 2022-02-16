@@ -339,12 +339,12 @@ function Affiliate() {
             <div className='frequently-asked-questions-color'>
                 <br />
                 <br />
-                <div className="">
+                <div className="container">
                     <p className='h2 text-center'><b>Frequently Asked Questions</b></p>
                     <br /><br /><br />
 
                     <div class="row">
-                        <div class="col-md-6 offset-md-3">
+                        <div class="col-md-12">
                             <div class="accordion accordion-flush" id="faqlist">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header px-2 frequently-asked-questions-color">

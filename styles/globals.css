@@ -1,3 +1,5 @@
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
 * {
   box-sizing: border-box;
   padding: 0;
@@ -14,6 +16,156 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+
+/*Star Rating Css Start*/
+fieldset,
+label {
+    margin: 0;
+    padding: 0
+}
+
+.rating {
+    border: none;
+    margin-right: 85px;
+}
+
+.myratings {
+    font-size: 85px;
+    color: green
+}
+
+.rating>[id^="star"] {
+    display: none
+}
+
+.rating>label:before {
+    margin: 5px;
+    font-size: 2.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+
+.rating>.half:before {
+    content: "\f089";
+    position: absolute
+}
+
+.rating>label {
+    color: #ddd;
+    float: right
+}
+
+.rating>[id^="star"]:checked~label,
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: #FFD700
+}
+
+.rating>[id^="star"]:checked+label:hover,
+.rating>[id^="star"]:checked~label:hover,
+.rating>label:hover~[id^="star"]:checked~label,
+.rating>[id^="star"]:checked~label:hover~label {
+    color: #FFED85
+}
+
+.reset-option {
+    display: none
+}
+
+.reset-button {
+    margin: 6px 12px;
+    background-color: rgb(255, 255, 255);
+    text-transform: uppercase
+}
+/*Star Rating Css End*/
+
+/*Star Rating1 Css Start*/
+
+.rating1>[id^="star"] {
+    display: none
+}
+
+.rating1>label:before {
+    margin: 5px;
+    font-size: 1em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+
+.rating1>.half:before {
+    content: "\f089";
+    position: absolute
+}
+
+.rating1>label {
+    color: #ddd;
+    float: right
+}
+
+.rating1>[id^="star"]:checked~label,
+.rating1:not(:checked)>label:hover,
+.rating1:not(:checked)>label:hover~label {
+    color: #FFD700
+}
+
+.rating1>[id^="star"]:checked+label:hover,
+.rating1>[id^="star"]:checked~label:hover,
+.rating1>label:hover~[id^="star"]:checked~label,
+.rating1>[id^="star"]:checked~label:hover~label {
+    color: #FFED85
+}
+
+/*Star Rating1 Css End*/
+
+/*Star Rating2 Css Start*/
+
+.rating2>[id^="star"] {
+    display: none
+}
+
+.rating2>label:before {
+    margin: 5px;
+    font-size: 1.50em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+
+.rating2>.half:before {
+    content: "\f089";
+    position: absolute
+}
+
+.rating2>label {
+    color: #ddd;
+    float: right
+}
+
+.rating2>[id^="star"]:checked~label,
+.rating2:not(:checked)>label:hover,
+.rating2:not(:checked)>label:hover~label {
+    color: #FFD700
+}
+
+.rating2>[id^="star"]:checked+label:hover,
+.rating2>[id^="star"]:checked~label:hover,
+.rating2>label:hover~[id^="star"]:checked~label,
+.rating2>[id^="star"]:checked~label:hover~label {
+    color: #FFED85
+}
+
+/*Star Rating2 Css End*/
+
+.Scrp{
+  width: 8%;
+}
+
+.Pdbg{
+  background-color: white;
 }
 
 .About{

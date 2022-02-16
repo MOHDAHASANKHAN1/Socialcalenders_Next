@@ -3,7 +3,7 @@ import Link from "next/link";
 function Navbar() {
     return (
         <>
-            <div className="bg-nav px-2">
+            <div className="bg-nav p-3">
                 <br />
                 <nav class="navbar navbar-expand-sm navbar-light relat" aria-label="Third navbar example">
                     <div class="container-fluid"><Link href="/">
@@ -18,19 +18,19 @@ function Navbar() {
                             <ul className="navbar-nav me-auto mb-2 mb-sm-0">
                                 <li className="nav-item"><Link href="/"><a className="nav-link  ">Home</a></Link></li>
                                 <li className="nav-item dropdown">
-                                    <Link href="/Products-By-Category" ><a className="nav-link dropdown-toggle  " id="dropdown03" data-bs-toggle="dropdown">Products</a></Link>
+                                    <Link href="/Products" ><a className="nav-link dropdown-toggle  " id="dropdown03" data-bs-toggle="dropdown">Products</a></Link>
                                     <ul className="dropdown-menu">
-                                        <li><Link href="/Products-By-Category/All-Products"><a className="dropdown-item text-center">All Products</a></Link></li>
-                                        <li><Link href="/Products-By-Category/Email-Marketing"><a className="dropdown-item text-center">Email Marketing</a></Link></li>
-                                        <li><Link href="/Products-By-Category/Calenders"><a className="dropdown-item text-center">Calenders</a></Link></li>
-                                        <li><Link href="/Products-By-Category/Planers"><a className="dropdown-item text-center">Planers</a></Link></li>
-                                        <li><Link href="/Products-By-Category/Courses"><a className="dropdown-item text-center">Courses</a></Link></li>
-                                        <li><Link href="/Products-By-Category/Lead-Magnets"><a className="dropdown-item text-center">Lead Magnets</a></Link></li>
-                                        <li><Link href="/Products-By-Category/Challenges"><a className="dropdown-item text-center">Challenges</a></Link></li>
-                                        <li><Link href="/Products-By-Category/Books"><a className="dropdown-item text-center">Books</a></Link></li>
-                                        <li><Link href="/Products-By-Category/Guides"><a className="dropdown-item text-center">Guides</a></Link></li>
-                                        <li><Link href="/Products-By-Category/Covers"><a className="dropdown-item text-center">Covers</a></Link></li>
-                                        <li><Link href="/Products-By-Category/Templates"><a className="dropdown-item text-center">Templates</a></Link></li>
+                                        <li><Link href="/Products/All-Products"><a className="dropdown-item text-center">All Products</a></Link></li>
+                                        <li><Link href="/Products/Email-Marketing"><a className="dropdown-item text-center">Email Marketing</a></Link></li>
+                                        <li><Link href="/Products/Calenders"><a className="dropdown-item text-center">Calenders</a></Link></li>
+                                        <li><Link href="/Products/Planers"><a className="dropdown-item text-center">Planers</a></Link></li>
+                                        <li><Link href="/Products/Courses"><a className="dropdown-item text-center">Courses</a></Link></li>
+                                        <li><Link href="/Products/Lead-Magnets"><a className="dropdown-item text-center">Lead Magnets</a></Link></li>
+                                        <li><Link href="/Products/Challenges"><a className="dropdown-item text-center">Challenges</a></Link></li>
+                                        <li><Link href="/Products/Books"><a className="dropdown-item text-center">Books</a></Link></li>
+                                        <li><Link href="/Products/Guides"><a className="dropdown-item text-center">Guides</a></Link></li>
+                                        <li><Link href="/Products/Covers"><a className="dropdown-item text-center">Covers</a></Link></li>
+                                        <li><Link href="/Products/Templates"><a className="dropdown-item text-center">Templates</a></Link></li>
                                     </ul>
                                 </li>
 

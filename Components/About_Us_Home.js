@@ -2,7 +2,8 @@ import Link from "next/link";
 
 function About_Us_Home() {
     return (
-        <><br /><br /><br /><br /><br />
+        <>
+            <br /><br /><br /><br /><br />
             <div className="row g-0">
                 <div className="col-sm-6 d-flex align-items-center justify-content-center">
                     <div className="About">
@@ -22,6 +23,7 @@ function About_Us_Home() {
                     </div>
                 </div>
             </div>
+            <br /><br /><br /><br /><br />
         </>
     );
 }
