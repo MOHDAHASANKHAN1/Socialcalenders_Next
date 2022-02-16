@@ -59,41 +59,41 @@ function Products_Details() {
     return (
         <>
             <br />
-            <div className="container">
+            <div className="container-fluid">
                 <h6 className='text-muted'>Templates / 200 Local Store Owner Templates for Social Media</h6>
                 <br />
                 <div className="row g-0 justify-content-around">
-                    <div className="col-sm-7">
+                    <div className="col-sm-6">
                         <div className="row gx-0 gy-0">
                             <div className="col-sm-2 col-2">
-                                <div className="row gx-0 gy-0">
+                                <div className="row gx-0 gy-1">
 
                                     <div className="col-sm-12 d-flex align-items-center justify-content-center">
-                                        <img src="/Pd.png" className="img-fluid image-change w-75 border border-primary rounded-3 p-2" alt="/" />
+                                        <img src="/Pd.png" className="img-fluid image-change w-50 border border-primary rounded-3 p-2" alt="/" />
                                     </div>
 
                                     <div className="col-sm-12 d-flex align-items-center justify-content-center">
-                                        <img src="/Pd1.png" className="img-fluid image-change w-75 border border-primary rounded-3 p-2" alt="/" />
+                                        <img src="/Pd1.png" className="img-fluid image-change w-50 border border-primary rounded-3 p-2" alt="/" />
                                     </div>
 
                                     <div className="col-sm-12 d-flex align-items-center justify-content-center">
-                                        <img src="/Pd2.png" className="img-fluid image-change w-75 border border-primary rounded-3 p-2" alt="/" />
+                                        <img src="/Pd2.png" className="img-fluid image-change w-50 border border-primary rounded-3 p-2" alt="/" />
                                     </div>
 
                                     <div className="col-sm-12 d-flex align-items-center justify-content-center">
-                                        <img src="/Pd3.png" className="img-fluid image-change w-75 border border-primary rounded-3 p-2" alt="/" />
+                                        <img src="/Pd3.png" className="img-fluid image-change w-50 border border-primary rounded-3 p-2" alt="/" />
                                     </div>
 
                                 </div>
                             </div>
                             <div className="col-sm-10 col-10 d-flex align-items-center justify-content-center">
-                                <div d-flex className='d-flex align-items-center justify-content-center w-75'>
+                                <div d-flex className='d-flex align-items-center justify-content-center w-50'>
                                     <img src="/Pd.png" className="img-fluid" id='main-image' alt="/" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-sm-5 d-flex justify-content-center p-4">
+                    <div className="col-sm-6 d-flex justify-content-center p-4">
                         <div className=''>
                             <h2><b>200 Local Store Owner Templates for Social Media</b></h2>
                             <div className="d-flex justify-content-start">
@@ -182,10 +182,10 @@ function Products_Details() {
 
             <div className="Affiliate-color2" >
                 <br /><br />
-                <div className="container">
-                    <div className="row gy-0 gx-5 justify-content-around">
+                <div className="container-fluid">
+                    <div className="row gy-0 gx-0 justify-content-around">
 
-                        <div className="col-sm-6">
+                        <div className="col-sm-6 p-4">
                             <div className='Pdbg rounded-3 p-4'>
                                 <h4><b>Why use ready-made templates?</b></h4>
                                 <br />
@@ -217,7 +217,7 @@ function Products_Details() {
                             </div>
                         </div>
 
-                        <div className="col-sm-6">
+                        <div className="col-sm-6 p-4">
                             <div className='Pdbg rounded-3 p-4'>
                                 <h4><b>How to get started</b></h4>
                                 <br />
@@ -311,7 +311,7 @@ function Products_Details() {
 
                 <div className='Pdbg'>
                     <br /><br /><br />
-                    <div className="container">
+                    <div className="container-fluid">
                         <div className="row g-0">
                             <div className="col-sm-6 d-flex justify-content-start px-5">
                                 <div>
@@ -356,7 +356,7 @@ function Products_Details() {
                                 <div class="collapse px-4" id="collapseExample">
                                     <div class="card card-body bg-info">
 
-                                        <div className="container-fluid py-2">
+                                        <div className="container-fluid-fluid py-2">
                                             <div className="row g-0">
                                                 <div className="col-sm-12">
                                                     <form onSubmit={(e) => Post_Review(e)} method="post" className=" border p-4 bg-light shadow">
@@ -477,7 +477,7 @@ function Products_Details() {
                 </div>
                 <br /><br /><br />
 
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row g-0 px-4">
                         <div className="col-sm-6 d-flex justify-content-start">
                             <h1><b>You May Also Like</b></h1>
