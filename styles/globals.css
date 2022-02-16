@@ -433,6 +433,24 @@ padding: 2.50%;
 .res{
 padding: 5%;
 }
+
+.rating2>label:before {
+    margin: 5px;
+    font-size: 1em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+.rating>label:before {
+    margin: 5px;
+    font-size: 1.75em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+.rp{
+  font-size: 1em;
+}
 }
 
 .img-wrapper-s{

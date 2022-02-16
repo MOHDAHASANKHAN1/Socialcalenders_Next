@@ -338,7 +338,7 @@ function Products_Details() {
                                             <label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                                             <input type="radio" class="reset-option" name="rating" value="reset" />
                                         </fieldset>
-                                        <h5 className="text-muted p-2">No Reviews Yet</h5>
+                                        <h5 className="text-muted p-2 rp">No Reviews Yet</h5>
                                     </div>
                                 </div>
                             </div>
