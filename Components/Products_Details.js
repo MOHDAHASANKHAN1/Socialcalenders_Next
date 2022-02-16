@@ -181,11 +181,11 @@ function Products_Details() {
             </div>
 
             <div className="Affiliate-color2" >
-                <br /><br />
                 <div className="container-fluid">
                     <div className="row gy-0 gx-0 justify-content-around">
 
                         <div className="col-sm-6 res">
+                            <br /><br /> <br />
                             <div className='Pdbg rounded-3 px-4 pt-4 resp'>
                                 <h4><b>Why use ready-made templates?</b></h4>
                                 <br />
@@ -216,6 +216,7 @@ function Products_Details() {
                         </div>
 
                         <div className="col-sm-6 res">
+                            <br /><br /><br />
                             <div className='Pdbg rounded-3 p-4'>
                                 <h4><b>How to get started</b></h4>
                                 <br />
