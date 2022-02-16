@@ -476,14 +476,14 @@ padding: 5%;
 
 .rating2>label:before {
     margin: 5px;
-    font-size: 1em;
+    font-size: 0.75em;
     font-family: FontAwesome;
     display: inline-block;
     content: "\f005"
 }
 .rating>label:before {
     margin: 5px;
-    font-size: 1.75em;
+    font-size: 0.67em;
     font-family: FontAwesome;
     display: inline-block;
     content: "\f005"
