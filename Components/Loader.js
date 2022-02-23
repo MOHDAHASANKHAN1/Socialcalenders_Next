@@ -7,7 +7,7 @@ export default function Loader() {
             <div className="mt-4">
                 <SkeletonTheme baseColor="#202020" highlightColor="#444">
                     <p>
-                        <Skeleton count={40} />
+                        <Skeleton count={44} />
                     </p>
                 </SkeletonTheme>
             </div>
