@@ -224,9 +224,9 @@ function Affiliate() {
                             <p className='h6 text-center text-muted'><b>$46 742</b></p>
                         </div>
                         <div className="col-sm-9 p-4">
-                            <p className='h2'><b><i>"One of the best affiliate programs"</i></b></p>
+                            <p className='h2'><b><i>{`"One of the best affiliate programs"`}</i></b></p>
                             <br /><br />
-                            <p className='h5 text-muted'><i>"I make my living with affiliate marketing, and I am constantly looking for great products and programs. Social Media Calendar's affiliate program is a perfect match! It's super easy to sell these templates because so many need these and love them... And you get ready-made promotional materials for every product! The craziest thing is that the average commission is usually about 10-20%, but you will start with 30% with SMC!! I am fighting my way up to Diamond!"</i></p>
+                            <p className='h5 text-muted'><i>{`"I make my living with affiliate marketing, and I am constantly looking for great products and programs. Social Media Calendar's affiliate program is a perfect match! It's super easy to sell these templates because so many need these and love them... And you get ready-made promotional materials for every product! The craziest thing is that the average commission is usually about 10-20%, but you will start with 30% with SMC!! I am fighting my way up to Diamond!"`}</i></p>
                             <br />
                             <p className='h5 text-muted'><i>- Juhani, Affiliate Marketer</i></p>
                         </div>
@@ -244,9 +244,9 @@ function Affiliate() {
                             <p className='h6 text-center text-muted'><b>$12 731</b></p>
                         </div>
                         <div className="col-sm-9 p-4">
-                            <p className='h2'><b><i>"I make $1000 extra in a month with these commissions"</i></b></p>
+                            <p className='h2'><b><i>{`"I make $1000 extra in a month with these commissions"`}</i></b></p>
                             <br /><br />
-                            <p className='h5 text-muted'><i>"I am a big fan of SMC's products by myself, and my followers ask every day how I can create such good content. It's easy to share my affiliate link with promotional code and recommend these templates and make some extra money. Now I make about $1000 in a month with SMC's commissions. It's becoming my best passive revenue stream as an influencer, and I will focus even more on this in the future.</i></p>
+                            <p className='h5 text-muted'><i>{`"I am a big fan of SMC's products by myself, and my followers ask every day how I can create such good content. It's easy to share my affiliate link with promotional code and recommend these templates and make some extra money. Now I make about $1000 in a month with SMC's commissions. It's becoming my best passive revenue stream as an influencer, and I will focus even more on this in the future.`}</i></p>
                             <br />
                             <p className='h5 text-muted'><i>- Lotta, Wellness Influencer</i></p>
                         </div>
@@ -273,7 +273,7 @@ function Affiliate() {
                     <br /><br />
                     <p className='h1 text-center'><b>How Does Our Affiliate Program Work?</b></p>
                     <br />
-                    <p className='h5 text-muted'><b>1. Sign in for Social Media Calendar's Affiliate Program.</b></p>
+                    <p className='h5 text-muted'><b>{`1. Sign in for Social Media Calendar's Affiliate Program.`}</b></p>
                     <br />
                     <p className='h5 text-muted'><b>2. Go to the affiliate program dashboard and copy your unique link for the whole web store of for a specific product.</b></p>
                     <br />
@@ -343,70 +343,70 @@ function Affiliate() {
                     <p className='h2 text-center'><b>Frequently Asked Questions</b></p>
                     <br /><br /><br />
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="accordion accordion-flush" id="faqlist">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header px-2 frequently-asked-questions-color">
-                                        <button class="accordion-button collapsed frequently-asked-questions-color" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="accordion accordion-flush" id="faqlist">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header px-2 frequently-asked-questions-color">
+                                        <button className="accordion-button collapsed frequently-asked-questions-color" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
                                             What is my commission and when I will receive the money?
                                         </button>
                                     </h2>
-                                    <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                        <div class="accordion-body">
+                                    <div id="faq-content-1" className="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                        <div className="accordion-body">
                                             We offer 30-50% commission for our Affiliates. More you sell, higher commission you will earn. Our affiliate software (Affilo) will pay your commission automatically after 14 days when the refund policy period for the order is passed.
                                         </div>
                                     </div>
                                 </div>
                                 <hr className="bg-dark" />
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header px-2 frequently-asked-questions-color">
-                                        <button class="accordion-button collapsed frequently-asked-questions-color" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header px-2 frequently-asked-questions-color">
+                                        <button className="accordion-button collapsed frequently-asked-questions-color" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
                                             Do you offer shareable discount codes for affiliates?
                                         </button>
                                     </h2>
-                                    <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                        <div class="accordion-body">
+                                    <div id="faq-content-2" className="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                        <div className="accordion-body">
                                             Yes we do. You can generate 10% discount code for your network in your affiliate dashboard.
                                         </div>
                                     </div>
                                 </div>
                                 <hr className="bg-dark" />
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header px-2 frequently-asked-questions-color">
-                                        <button class="accordion-button collapsed frequently-asked-questions-color" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header px-2 frequently-asked-questions-color">
+                                        <button className="accordion-button collapsed frequently-asked-questions-color" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
                                             Do you help me with selling?
                                         </button>
                                     </h2>
-                                    <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                        <div class="accordion-body">
+                                    <div id="faq-content-3" className="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                        <div className="accordion-body">
                                             Yes we do. We have own Facebook group for all affiliates which is a great place to ask, learn and share tips with other affiliates. You can also send is a priority message via affiliate dashboard.
                                         </div>
                                     </div>
                                 </div>
                                 <hr className="bg-dark" />
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header px-2 frequently-asked-questions-color">
-                                        <button class="accordion-button collapsed frequently-asked-questions-color" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header px-2 frequently-asked-questions-color">
+                                        <button className="accordion-button collapsed frequently-asked-questions-color" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
                                             Do you offer promotional materials for your products?
                                         </button>
                                     </h2>
-                                    <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                        <div class="accordion-body">
-                                            Yes we do. Once you finish the registration process, you will get access to "Affiliate Marketing Vault" where you will find promotional materials for almost all our porducts.
+                                    <div id="faq-content-4" className="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                        <div className="accordion-body">
+                                            {`Yes we do. Once you finish the registration process, you will get access to "Affiliate Marketing Vault" where you will find promotional materials for almost all our porducts.`}
                                         </div>
                                     </div>
                                 </div>
                                 <hr className="bg-dark" />
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header px-2 frequently-asked-questions-color">
-                                        <button class="accordion-button collapsed frequently-asked-questions-color" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header px-2 frequently-asked-questions-color">
+                                        <button className="accordion-button collapsed frequently-asked-questions-color" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
                                             What is MLM?
                                         </button>
                                     </h2>
-                                    <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                        <div class="accordion-body">
-                                            MLM stands for "Multi-Level Marketing" which means that you can also invite others to become an affiliate for us. If a new affiliate sign up via your referral link, you will become a "parent affiliate" for him/her and earn 5% for every sale he/she makes.
+                                    <div id="faq-content-5" className="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                        <div className="accordion-body">
+                                            {`MLM stands for "Multi-Level Marketing" which means that you can also invite others to become an affiliate for us. If a new affiliate sign up via your referral link, you will become a "parent affiliate" for him/her and earn 5% for every sale he/she makes.`}
                                         </div>
                                     </div>
                                 </div>

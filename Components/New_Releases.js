@@ -61,9 +61,9 @@ function New_Releases() {
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new1.png" className="d-block w-100" alt="..." /> </div>
                                             <div className="card-body">
-                                                <h5 className="card-title">What's NEW in December</h5>
+                                                <h5 className="card-title">{`What's NEW in December`}</h5>
                                                 <br />
-                                                <h6 className="text-muted">What's NEW in December Hey everybody! We hope your Christmas went well!...</h6>
+                                                <h6 className="text-muted">{`What's NEW in December`} Hey everybody! We hope your Christmas went well!...</h6>
                                             </div>
                                         </div>
                                     </a>
@@ -78,9 +78,9 @@ function New_Releases() {
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new2.jpg" className="d-block w-100" alt="..." /> </div>
                                             <div className="card-body">
-                                                <h5 className="card-title">What's NEW in November</h5>
+                                                <h5 className="card-title">{`What's NEW in November`}</h5>
                                                 <br />
-                                                <h6 className="text-muted">What's NEW in November Good news everyone! It's been a busy month for us...</h6>
+                                                <h6 className="text-muted">{`What's NEW in November Good news everyone! It's been a busy month for us...`}</h6>
                                             </div>
                                         </div>
                                     </a>
@@ -95,9 +95,9 @@ function New_Releases() {
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new1.png" className="d-block w-100" alt="..." /> </div>
                                             <div className="card-body">
-                                                <h5 className="card-title">What's NEW in December</h5>
+                                                <h5 className="card-title">{`What's NEW in December`}</h5>
                                                 <br />
-                                                <h6 className="text-muted">What's NEW in December Hey everybody! We hope your Christmas went well!...</h6>
+                                                <h6 className="text-muted">{`What's NEW in December`} Hey everybody! We hope your Christmas went well!...</h6>
                                             </div>
                                         </div>
                                     </a>
@@ -112,9 +112,9 @@ function New_Releases() {
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new2.jpg" className="d-block w-100" alt="..." /> </div>
                                             <div className="card-body">
-                                                <h5 className="card-title">What's NEW in November</h5>
+                                                <h5 className="card-title">{`What's NEW in November`}</h5>
                                                 <br />
-                                                <h6 className="text-muted">What's NEW in November Good news everyone! It's been a busy month for us...</h6>
+                                                <h6 className="text-muted">{`What's NEW in November Good news everyone! It's been a busy month for us...`}</h6>
                                             </div>
                                         </div>
                                     </a>
@@ -129,9 +129,9 @@ function New_Releases() {
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new1.png" className="d-block w-100" alt="..." /> </div>
                                             <div className="card-body">
-                                                <h5 className="card-title">What's NEW in December</h5>
+                                                <h5 className="card-title">{`What's NEW in December`}</h5>
                                                 <br />
-                                                <h6 className="text-muted">What's NEW in December Hey everybody! We hope your Christmas went well!...</h6>
+                                                <h6 className="text-muted">{`What's NEW in December`} Hey everybody! We hope your Christmas went well!...</h6>
                                             </div>
                                         </div>
                                     </a>
@@ -146,9 +146,9 @@ function New_Releases() {
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new2.jpg" className="d-block w-100" alt="..." /> </div>
                                             <div className="card-body">
-                                                <h5 className="card-title">What's NEW in November</h5>
+                                                <h5 className="card-title">{`What's NEW in November`}</h5>
                                                 <br />
-                                                <h6 className="text-muted">What's NEW in November Good news everyone! It's been a busy month for us...</h6>
+                                                <h6 className="text-muted">{`What's NEW in November Good news everyone! It's been a busy month for us...`}</h6>
                                             </div>
                                         </div>
                                     </a>
@@ -163,9 +163,9 @@ function New_Releases() {
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new1.png" className="d-block w-100" alt="..." /> </div>
                                             <div className="card-body">
-                                                <h5 className="card-title">What's NEW in December</h5>
+                                                <h5 className="card-title">{`What's NEW in December`}</h5>
                                                 <br />
-                                                <h6 className="text-muted">What's NEW in December Hey everybody! We hope your Christmas went well!...</h6>
+                                                <h6 className="text-muted">{`What's NEW in December`} Hey everybody! We hope your Christmas went well!...</h6>
                                             </div>
                                         </div>
                                     </a>
@@ -180,9 +180,9 @@ function New_Releases() {
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new2.jpg" className="d-block w-100" alt="..." /> </div>
                                             <div className="card-body">
-                                                <h5 className="card-title">What's NEW in November</h5>
+                                                <h5 className="card-title">{`What's NEW in November`}</h5>
                                                 <br />
-                                                <h6 className="text-muted">What's NEW in November Good news everyone! It's been a busy month for us...</h6>
+                                                <h6 className="text-muted">{`What's NEW in November Good news everyone! It's been a busy month for us...`}</h6>
                                             </div>
                                         </div>
                                     </a>

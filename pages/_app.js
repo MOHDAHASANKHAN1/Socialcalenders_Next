@@ -1,4 +1,5 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import { wrapper } from '../Redux/store';
 import Headl from '../Components/Headl';
 import Scriptm from '../Components/Script';
 import Navbar from "../Components/Navbar";
@@ -16,4 +17,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);

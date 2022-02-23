@@ -52,7 +52,7 @@ export default function Contact() {
         <br />
         <p className="text-center">We created Social Media Calendar™ for you to help you get rid of content creation and focus on results instead. Founded as the first-to-market social media content library in 2019, we have grown from single template bundles to an endless collection of content for Instagram, Facebook, LinkedIn, Twitter, and Pinterest.</p>
         <br />
-        <p className="text-center">Social media is a visual experience, and our dedicated team of world-class graphic designers will do their best to give you access to fresh and up-to-date social media templates that will guarantee you success.</p>
+        <p className="text-center">Social media is a visual experience, and our dedicated team of world-className graphic designers will do their best to give you access to fresh and up-to-date social media templates that will guarantee you success.</p>
         <br />
 
         <h1 className="text-center"><b>Have a question?</b></h1>
@@ -61,28 +61,28 @@ export default function Contact() {
         <br />
       </div>
       <div className="px-3">
-        <div id="bod" class=" container-fluid mb-0 my-0 mt-0 mx-0">
-          <div class="contact-form">
+        <div id="bod" className=" container-fluid mb-0 my-0 mt-0 mx-0">
+          <div className="contact-form">
             <h1>Contact Us</h1>
             <hr />
-            <div class="row">
-              <div class="col-md-6">
-                <h1 style={{ color: "#6ff" }}><b>let's get in touch</b></h1><br /><i class="fa fa-map-marker" aria-hidden="true">
-                  <h6 class="size">Location: Mohanlalganj, Lucknow</h6>
-                </i><br /><i class="fa email-box fa-envelope" aria-hidden="true">
-                  <h6 class="size">Email: aimtahsankhan@gmail.com</h6>
-                </i><br /><i class="fa fa-phone phone" aria-hidden="true">
-                  <h6 class="size">Phone: +91-9918423716</h6>
+            <div className="row">
+              <div className="col-md-6">
+                <h1 style={{ color: "#6ff" }}><b>{`let's get in touch`}</b></h1><br /><i className="fa fa-map-marker" aria-hidden="true">
+                  <h6 className="size">Location: Mohanlalganj, Lucknow</h6>
+                </i><br /><i className="fa email-box fa-envelope" aria-hidden="true">
+                  <h6 className="size">Email: aimtahsankhan@gmail.com</h6>
+                </i><br /><i className="fa fa-phone phone" aria-hidden="true">
+                  <h6 className="size">Phone: +91-9918423716</h6>
                 </i>
               </div>
-              <div class="col-md-6">
-                <form><div class="form-group">
-                  <label>Name</label><input class="form-control" name="name" value={name} onChange={(e) => setName(e.target.value)} /></div>
-                  <div class="form-group"><label>Email</label><input class="form-control" name="email" value={email} onChange={(e) => setEmail(e.target.value)} /></div>
-                  <div class="form-group"><label>Massage</label><textarea class="form-control" rows="7"
+              <div className="col-md-6">
+                <form><div className="form-group">
+                  <label>Name</label><input className="form-control" name="name" value={name} onChange={(e) => setName(e.target.value)} /></div>
+                  <div className="form-group"><label>Email</label><input className="form-control" name="email" value={email} onChange={(e) => setEmail(e.target.value)} /></div>
+                  <div className="form-group"><label>Massage</label><textarea className="form-control" rows="7"
                     name="disc" value={message} onChange={(e) => setMessage(e.target.value)}></textarea></div><br />
-                  <div class="form-group">
-                    <div class="d-grid"><button class="btn btn-primary" type="button" onClick={() => Submit()}>Send</button></div>
+                  <div className="form-group">
+                    <div className="d-grid"><button className="btn btn-primary" type="button" onClick={() => Submit()}>Send</button></div>
                   </div>
                 </form>
               </div>
