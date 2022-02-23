@@ -43,10 +43,10 @@ function Cart_Cmp() {
                             <img src={data.url}
                                 className="img-fluid rounded-3" alt="Cotton T-shirt" />
                         </div>
-                        <div className="col-md-3 col-lg-3 col-xl-3">
+                        <div className="col-md-4 col-lg-4 col-xl-4">
                             <p className="lead fw-normal mb-2">{data.tittle}</p>
                         </div>
-                        <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
+                        <div className="col-md-2 col-lg-3 col-xl-2 d-flex">
                             <button className="btn btn-link px-2" onClick={() => Removeqt({ quantity: 1, id: data.id })}>
                                 <i className="fas fa-minus"></i>
                             </button>
@@ -58,7 +58,7 @@ function Cart_Cmp() {
                                 <i className="fas fa-plus"></i>
                             </button>
                         </div>
-                        <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                        <div className="col-md-2 col-lg-2 col-xl-2 offset-lg-1">
                             <h5 className="mb-0">{`$${data.uprice}`}</h5>
                         </div>
 
