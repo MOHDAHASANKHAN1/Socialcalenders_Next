@@ -44,7 +44,7 @@ const Loding = (props) => {
                 {
                     props.data.map((data) =>
 
-                        <div className="col-6 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4 py-5 d-flex align-items-center justify-content-center" key={1}>
+                        <div className="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4 py-5 d-flex align-items-center justify-content-center" key={1}>
                             <div className={`card card-ss show `} id={data._id}>
                                 <Link href={`/Product/${data.productpath}`}>
                                     <a>
@@ -301,7 +301,7 @@ function Product_Base(props) {
             <Product_Base_Head />
 
             <div className="row g-0 py-5">
-                <div className="col-sm-12 com-md-12 col-lg-3 ">
+                <div className="col-12 col-sm-3 com-md-3 col-lg-3 ">
 
                     <div className="row g-0 justify-content-around" id="unfilter">
                         <div className="col-sm-5 col-5 p-3 btn-outline-dark btn btn-default side">
@@ -341,7 +341,7 @@ function Product_Base(props) {
 
                 </div>
 
-                <div className="col-sm-12 com-md-12 col-12 col-lg-9">
+                <div className="col-sm-9 com-md-9 col-12 col-lg-9">
 
                     <div className="row g-0">
                         <Loding data={data} />

@@ -166,6 +166,40 @@ function Cart_Cmp() {
                                 </div>
                             </div>
                         </div>
+                        <div className="container-fluid mt-100">
+                            <div className="row">
+                                <div className="col-md-12 p-4">
+                                    <div className="card">
+                                        <div className="card-header">
+                                            <h3 className="fw-normal mb-0 text-black ">Shopping Cart</h3>
+                                        </div>
+                                        <div className="card-body cart p-4">
+                                            <div className="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" className="img-fluid mb-4 mr-3" />
+                                                <h3><strong><b>Your Cart is Empty</b></strong></h3>
+                                                <h4>Add something to make me happy :)</h4> <a href="#" className="btn btn-primary cart-btn-transform m-3 p-3" data-abc="true" onClick={() => Router.push("/Products/All")}><b>CONTINUE SHOPPING <span><i className='fas fa-long-arrow-alt-right px-2'></i></span></b></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="container-fluid mt-100">
+                            <div className="row">
+                                <div className="col-md-12 p-4">
+                                    <div className="card">
+                                        <div className="card-header">
+                                            <h3 className="fw-normal mb-0 text-black ">Shopping Cart</h3>
+                                        </div>
+                                        <div className="card-body cart p-4">
+                                            <div className="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" className="img-fluid mb-4 mr-3" />
+                                                <h3><strong><b>Your Cart is Empty</b></strong></h3>
+                                                <h4>Add something to make me happy :)</h4> <a href="#" className="btn btn-primary cart-btn-transform m-3 p-3" data-abc="true" onClick={() => Router.push("/Products/All")}><b>CONTINUE SHOPPING <span><i className='fas fa-long-arrow-alt-right px-2'></i></span></b></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </>
             }
         </>

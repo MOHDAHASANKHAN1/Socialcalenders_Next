@@ -516,14 +516,14 @@ padding: 1.25%;
 }
 
 @media (min-width: 876px) and (max-width: 992px){
-.filter{
+#unfilter{
   display: none;
 }
 }
 
 
 @media (min-width: 993px) and (max-width: 1075px){
-#unfilter{
+.filter{
   display: none;
 }
 }
@@ -595,7 +595,6 @@ padding: 2.50%;
 .filter{
   display: none;
 }
-
 }
 
 @media (min-width: 576px) and (max-width: 675px) {

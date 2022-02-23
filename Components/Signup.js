@@ -32,6 +32,8 @@ function Signup() {
         <section className="bg-image" style={{ backgroundImage: "url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp')" }}>
             <div className="mask d-flex align-items-center h-100 gradient-custom-3">
                 <div className="container py-5">
+                <br />
+            <br />
                     <div className="row d-flex justify-content-center align-items-center">
                         <div className="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div className="card" style={{ borderRadius: "15px" }}>
@@ -132,6 +134,8 @@ function Signup() {
                             </div>
                         </div>
                     </div>
+                    <br />
+            <br /><br />
                 </div>
             </div>
         </section>
