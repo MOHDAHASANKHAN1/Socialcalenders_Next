@@ -515,6 +515,7 @@ padding: 1.25%;
 
 }
 
+
 @media (min-width: 876px) and (max-width: 992px){
 #unfilter{
   display: none;
@@ -523,7 +524,7 @@ padding: 1.25%;
 
 
 @media (min-width: 993px) and (max-width: 1075px){
-.filter{
+#unfilter{
   display: none;
 }
 }
@@ -592,7 +593,7 @@ padding: 2.50%;
 .resp{
   padding-bottom: 10px;
 }
-.filter{
+#unfilter{
   display: none;
 }
 }
