@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { parseCookies } from 'nookies';
 import cookie from 'js-cookie';
-import { useRouter } from "next/Router";
+import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 
 function Navbar() {
