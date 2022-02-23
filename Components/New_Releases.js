@@ -56,7 +56,7 @@ function New_Releases() {
 
                         <div className="carousel-item active">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Happiness">
+                                <Link href="/Products/All/Happiness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new1.png" className="d-block w-100" alt="..." /> </div>
@@ -73,7 +73,7 @@ function New_Releases() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Happiness">
+                                <Link href="/Products/All/Happiness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new2.jpg" className="d-block w-100" alt="..." /> </div>
@@ -90,7 +90,7 @@ function New_Releases() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Happiness">
+                                <Link href="/Products/All/Happiness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new1.png" className="d-block w-100" alt="..." /> </div>
@@ -107,7 +107,7 @@ function New_Releases() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Happiness">
+                                <Link href="/Products/All/Happiness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new2.jpg" className="d-block w-100" alt="..." /> </div>
@@ -124,7 +124,7 @@ function New_Releases() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Happiness">
+                                <Link href="/Products/All/Happiness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new1.png" className="d-block w-100" alt="..." /> </div>
@@ -141,7 +141,7 @@ function New_Releases() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Happiness">
+                                <Link href="/Products/All/Happiness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new2.jpg" className="d-block w-100" alt="..." /> </div>
@@ -158,7 +158,7 @@ function New_Releases() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Happiness">
+                                <Link href="/Products/All/Happiness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new1.png" className="d-block w-100" alt="..." /> </div>
@@ -175,7 +175,7 @@ function New_Releases() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Happiness">
+                                <Link href="/Products/All/Happiness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/new2.jpg" className="d-block w-100" alt="..." /> </div>

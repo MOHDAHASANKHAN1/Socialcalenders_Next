@@ -55,7 +55,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item active">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Happiness">
+                                <Link href="/Products/All/Happiness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Happiness.png" className="d-block w-100" alt="..." /> </div>
@@ -65,7 +65,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Social-Media">
+                                <Link href="/Products/All/Social-Media">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Social.png" className="d-block w-100" alt="..." /> </div>
@@ -80,7 +80,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Holiday">
+                                <Link href="/Products/All/Holiday">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Holiday.png" className="d-block w-100" alt="..." /> </div>
@@ -90,7 +90,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Real-Estate">
+                                <Link href="/Products/All/Real-Estate">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Real-Estate.png" className="d-block w-100" alt="..." /> </div>
@@ -105,7 +105,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Bussiness">
+                                <Link href="/Products/All/Bussiness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Bussiness.png" className="d-block w-100" alt="..." /> </div>
@@ -115,7 +115,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Motivation">
+                                <Link href="/Products/All/Motivation">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Motivation.png" className="d-block w-100" alt="..." /> </div>
@@ -130,7 +130,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Travel">
+                                <Link href="/Products/All/Travel">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Travel.png" className="d-block w-100" alt="..." /> </div>
@@ -140,7 +140,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Fitness">
+                                <Link href="/Products/All/Fitness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Fitness.png" className="d-block w-100" alt="..." /> </div>
@@ -155,7 +155,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Nutrition">
+                                <Link href="/Products/All/Nutrition">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Nutrition.png" className="d-block w-100" alt="..." /> </div>
@@ -165,7 +165,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Music">
+                                <Link href="/Products/All/Music">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Music.png" className="d-block w-100" alt="..." /> </div>
@@ -180,7 +180,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Beauty">
+                                <Link href="/Products/All/Beauty">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Beuty.png" className="d-block w-100" alt="..." /> </div>
@@ -190,7 +190,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Finance">
+                                <Link href="/Products/All/Finance">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Finance.png" className="d-block w-100" alt="..." /> </div>
@@ -205,7 +205,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Fashion">
+                                <Link href="/Products/All/Fashion">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Fashion.png" className="d-block w-100" alt="..." /> </div>
@@ -215,7 +215,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Wellness">
+                                <Link href="/Products/All/Wellness">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Wellness.png" className="d-block w-100" alt="..." /> </div>
@@ -230,7 +230,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Coaching">
+                                <Link href="/Products/All/Coaching">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Coaching.png" className="d-block w-100" alt="..." /> </div>
@@ -240,7 +240,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Pets">
+                                <Link href="/Products/All/Pets">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Pets.png" className="d-block w-100" alt="..." /> </div>
@@ -255,7 +255,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Home">
+                                <Link href="/Products/All/Home">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Home.png" className="d-block w-100" alt="..." /> </div>
@@ -265,7 +265,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Liferstyle">
+                                <Link href="/Products/All/Liferstyle">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Lifestyle.png" className="d-block w-100" alt="..." /> </div>
@@ -280,7 +280,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Wedding">
+                                <Link href="/Products/All/Wedding">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Wedding.png" className="d-block w-100" alt="..." /> </div>
@@ -290,7 +290,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Health">
+                                <Link href="/Products/All/Health">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Health.png" className="d-block w-100" alt="..." /> </div>
@@ -305,7 +305,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Food">
+                                <Link href="/Products/All/Food">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Food.png" className="d-block w-100" alt="..." /> </div>
@@ -315,7 +315,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Sports">
+                                <Link href="/Products/All/Sports">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Sports.png" className="d-block w-100" alt="..." /> </div>
@@ -330,7 +330,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Services">
+                                <Link href="/Products/All/Services">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Services.png" className="d-block w-100" alt="..." /> </div>
@@ -340,7 +340,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Gadering">
+                                <Link href="/Products/All/Gadering">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Gadering.png" className="d-block w-100" alt="..." /> </div>
@@ -355,7 +355,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Education">
+                                <Link href="/Products/All/Education">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Education.png" className="d-block w-100" alt="..." /> </div>
@@ -365,7 +365,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Events">
+                                <Link href="/Products/All/Events">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Events.png" className="d-block w-100" alt="..." /> </div>
@@ -380,7 +380,7 @@ function Choose_Industry() {
 
                         <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products-By-Category/All-Products/Therapy">
+                                <Link href="/Products/All/Therapy">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Therapy.png" className="d-block w-100" alt="..." /> </div>
@@ -390,7 +390,7 @@ function Choose_Industry() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products-By-Category/All-Products/Fashion">
+                                <Link href="/Products/All/Fashion">
                                     <a>
                                         <div className="card">
                                             <div className="img-wrapper"><img src="/Fashion.png" className="d-block w-100" alt="..." /> </div>
