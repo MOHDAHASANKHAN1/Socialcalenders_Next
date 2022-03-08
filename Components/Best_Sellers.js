@@ -53,12 +53,11 @@ function Best_Sellers() {
 
                 <div id="carouselExampleControls-third" className="carousel" data-bs-ride="carousel">
                     <div className="carousel-inner">
-
-                        <div className="carousel-item active">
+                        <div className="carousel-item">
                             <div className="d-flex">
-                                <Link href="/Products/All/Happiness">
+                                <Link href="/Products/All/Happiness" style={{ width: "20rem" }}>
                                     <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
+                                        <div className="card cards-s d-flex align-items-center justify-content-center mx-1" style={{ width: "20rem" }}>
                                             <div className="img-wrapper-s"><img src="/Real-State-Book.png" className="d-block w-100" alt="..." /> </div>
                                             <div className="card-body">
                                                 <h5 className="card-title text-center">300 Real Estate Templates For Social Media</h5>
@@ -67,175 +66,12 @@ function Best_Sellers() {
                                         </div>
                                     </a>
                                 </Link>
-                                <Link href="/Products/All/Social-Media">
+                                <Link href="/Products/All/Happiness">
                                     <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Women.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                <h6 className="text-center text-muted"><del>$59.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="carousel-item">
-                            <div className="d-flex">
-                                <Link href="/Products/All/Holiday">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Mind.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">300 Mindfullness Templates For Social Media</h5>
-                                                <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                                <Link href="/Products/All/Holiday">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Mind.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">email marketing kits</h5>
-                                                <h6 className="text-center text-muted"><del>$199.00</del><span className="text-danger px-2">$99.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="carousel-item">
-                            <div className="d-flex">
-                                <Link href="/Products/All/Holiday">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Crypto.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                                <Link href="/Products/All/Real-Estate">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Oil.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="carousel-item">
-                            <div className="d-flex">
-                                <Link href="/Products/All/Holiday">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Candle.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                                <Link href="/Products/All/Real-Estate">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Jewelry.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                        </div>
-
-
-                        <div className="carousel-item">
-                            <div className="d-flex">
-                                <Link href="/Products/All/Holiday">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Mind.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                                <Link href="/Products/All/Real-Estate">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Email.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="carousel-item">
-                            <div className="d-flex">
-                                <Link href="/Products/All/Holiday">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Crypto.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                                <Link href="/Products/All/Real-Estate">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Oil.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="carousel-item">
-                            <div className="d-flex">
-                                <Link href="/Products/All/Holiday">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
+                                        <div className="card cards-s d-flex align-items-center justify-content-center mx-1" style={{ width: "20rem" }}>
                                             <div className="img-wrapper-s"><img src="/Real-State-Book.png" className="d-block w-100" alt="..." /> </div>
                                             <div className="card-body">
-                                                <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                                <Link href="/Products/All/Real-Estate">
-                                    <a>
-                                        <div className="card cards-s d-flex align-items-center justify-content-center">
-                                            <div className="img-wrapper-s"><img src="/Women.png" className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
+                                                <h5 className="card-title text-center">300 Real Estate Templates For Social Media</h5>
                                                 <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
                                             </div>
                                         </div>
@@ -244,7 +80,8 @@ function Best_Sellers() {
                             </div>
                         </div>
 
-                    </div>
+
+                    </div >
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls-third" data-bs-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Previous</span>
@@ -253,8 +90,8 @@ function Best_Sellers() {
                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Next</span>
                     </button>
-                </div>
-            </div>
+                </div >
+            </div >
         </>
     );
 }

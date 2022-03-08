@@ -9,7 +9,7 @@ import { Add_To_Cart } from "../Redux/Action/Cart";
 import { useDispatch } from "react-redux";
 import Loader from './Loader';
 
-function Products_Details({ Detailes }) {
+function Products_Details({ Detailes, Casu }) {
 
     const { User_Role } = parseCookies();
     const dispatch = useDispatch();
@@ -62,12 +62,27 @@ function Products_Details({ Detailes }) {
 
     }, []);
 
-    function Delete(id, imageid, category) {
+    function DeleteAll(productpath, image, category, subcategory) {
 
         axios
-            .delete(`/api/Product?id=${id}&imageid=${JSON.stringify(imageid)}`)
+            .delete(`/api/Product?Type=All&productpath=${productpath}&image=${JSON.stringify(image)}&category=${category}&subcategory=${subcategory}`)
             .then((res) => {
                 alert(res.data.message);
+                if (res.data.message === "Successfully Deleted") {
+                    router.push(`/Products/${category}`);
+                }
+            });
+    }
+
+    function DeleteOnly(productpath, image, category, subcategory) {
+
+        axios
+            .delete(`/api/Product?Type=Only&productpath=${productpath}&image=${JSON.stringify(image)}&category=${category}&subcategory=${subcategory}`)
+            .then((res) => {
+                alert(res.data.message);
+                if (res.data.message === "Successfully Deleted Image") {
+                    router.push(`/Product/${category}/${subcategory}/${productpath}`);
+                }
                 if (res.data.message === "Successfully Deleted") {
                     router.push(`/Products/${category}`);
                 }
@@ -95,7 +110,7 @@ function Products_Details({ Detailes }) {
                 <>
                     <br />
                     <div className="container-fluid">
-                        <h6 className='text-muted  ress'>{`${Product.category[1]} / ${Product.tittle}`}</h6>
+                        <h6 className='text-muted  ress'>{`${router.query.Product_Category} / ${Product.tittle}`}</h6>
                         <br />
                         <div className="row g-0 justify-content-around  ress">
                             <div className="col-sm-6">
@@ -103,17 +118,60 @@ function Products_Details({ Detailes }) {
                                     <div className="col-sm-2 col-2">
                                         <div className="row gx-0 gy-2">
                                             {
-                                                Product.imageurl.map((url) =>
-                                                    <div className="col-sm-12 d-flex align-items-center justify-content-center" key={1}>
-                                                        <img src={url} className="img-fluid image-change w-50 border border-primary rounded-3 p-2" alt="/" />
-                                                    </div>
+                                                Product.image.map((image) =>
+
+                                                    <>
+                                                        <div className="col-sm-12 d-flex justify-content-center" key={1}>
+                                                            {
+                                                                User_Role === "Admin" ?
+                                                                    <>
+                                                                        <i className="btn fas fa-pen pt-2 px-2 text-success" onClick={() => router.push(`/Update-Product-Image/${Casu.Cat}/${Casu.Sub}/${Product.productpath}/${image.id}`)}></i><img src={image.url} className="img-fluid image-change w-50 border border-primary rounded-3 p-2" alt="/" /><i className="btn fas fa-trash-alt pt-2 px-2 text-danger" data-bs-toggle="modal" data-bs-target={`#${image.id}`}></i>
+                                                                    </>
+                                                                    :
+                                                                    <img src={image.url} className="img-fluid image-change w-50 border border-primary rounded-3 p-2" alt="/" />
+                                                            }
+                                                            <div className="modal fade" id={image.id} tabIndex="-1" aria-labelledby="DeleteLabelimg" aria-hidden="true">
+                                                                <div className="modal-dialog modal-dialog-centered">
+                                                                    <div className="modal-content">
+                                                                        <div className="modal-header">
+                                                                            <h5 className="modal-title text-dark" id="DeleteLabel"><b>Delete Image</b></h5>
+                                                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div className="modal-body">
+                                                                            <p className="text-muted"><b>Are you sure you want to delete the selected Image ?</b></p>
+                                                                        </div>
+                                                                        <hr className="bg-dark" />
+                                                                        <div className="row g-0">
+                                                                            <div className="col-sm-6 col-6 d-flex align-items-center justify-content-start px-4 pb-4">
+                                                                                <button type="button" className="btn btn-secondary text-dark" data-bs-dismiss="modal"><b>Cancel</b></button>
+                                                                            </div>
+                                                                            <div className=" col-sm-6 col-6 d-flex align-items-center justify-content-end px-4 pb-4">
+                                                                                <button type="button" className="btn btn-danger" data-bs-dismiss="modal" onClick={() => DeleteOnly(Product.productpath, { url: image.url, id: image.id }, Casu.Cat, Casu.Sub)}><b>Delete</b></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </>
                                                 )
+                                            }
+                                            {
+                                                User_Role === "Admin" ?
+                                                    <>
+                                                        <div className="col-sm-12 d-flex align-items-center justify-content-center" key={1}>
+                                                            <div className="btn w-50 text-center border border-primary rounded-3" onClick={() => router.push(`/Add-Product-Image/${Casu.Cat}/${Casu.Sub}/${Product.productpath}`)}><i class="text center fa fa-plus" aria-hidden="true"></i></div>
+                                                        </div>
+                                                    </>
+                                                    :
+                                                    ""
                                             }
                                         </div>
                                     </div>
                                     <div className="col-sm-10 col-10 d-flex align-items-center justify-content-center">
                                         <div d-flex className='d-flex align-items-center justify-content-center w-75'>
-                                            <img src={Product.imageurl[0]} className="img-fluid" id='main-image' alt="/" />
+                                            <img src={Product.image[0].url} className="img-fluid" id='main-image' alt="/" />
                                         </div>
                                     </div>
                                 </div>
@@ -161,7 +219,7 @@ function Products_Details({ Detailes }) {
                                                 <br />
                                                 <div className="row g-0">
                                                     <div className="col-sm-6 col-6 d-flex justify-content-center">
-                                                        <button className="btn-success px-3 py-1" onClick={() => router.push(`/Update-Product/${Product.productpath}`)}><i className="fas fa-pen px-1"></i> Edit</button>
+                                                        <button className="btn-success px-3 py-1" onClick={() => router.push(`/Update-Product/${router.query.Product_Category}/${router.query.Product_Subcategory}/${Product.productpath}`)}><i className="fas fa-pen px-1"></i> Edit</button>
                                                     </div>
                                                     <div className="col-sm-6 col-6 d-flex justify-content-center">
                                                         <button className="btn-danger px-3 py-1" data-bs-toggle="modal" data-bs-target="#Delete"><i className="fas px-1 fa-trash-alt"></i> Delete</button>
@@ -184,7 +242,7 @@ function Products_Details({ Detailes }) {
                                                                     <button type="button" className="btn btn-secondary text-dark" data-bs-dismiss="modal"><b>Cancel</b></button>
                                                                 </div>
                                                                 <div className=" col-sm-6 col-6 d-flex align-items-center justify-content-end px-4 pb-4">
-                                                                    <button type="button" className="btn btn-danger" data-bs-dismiss="modal" onClick={() => Delete(Product._id, Product.imageid, Product.category[1])}><b>Delete</b></button>
+                                                                    <button type="button" className="btn btn-danger" data-bs-dismiss="modal" onClick={() => DeleteAll(Product.productpath, Product.image, Casu.Cat, Casu.Sub)}><b>Delete</b></button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -198,7 +256,7 @@ function Products_Details({ Detailes }) {
                                     <br />
                                     <br />
                                     <div className="d-grid gap-2">
-                                        <button className="btn btn-primary rounded-pill p-3" type="button" onClick={() => Add({ quantity: 1, id: Product._id, url: Product.imageurl[0], tittle: Product.tittle, oprice: parseFloat(Product.oprice), uprice: parseFloat(Product.oprice), productpath: Product.productpath })}><b>Add To Cart</b></button>
+                                        <button className="btn btn-primary rounded-pill p-3" type="button" onClick={() => Add({ quantity: 1, url: Product.image[0].url, tittle: Product.tittle, oprice: parseFloat(Product.oprice), uprice: parseFloat(Product.oprice), productpath: Product.productpath, category: Casu.Cat, subcategory: Casu.Sub })}><b>Add To Cart</b></button>
                                     </div>
                                     <br />
                                     <h6 className="text-muted text-center">Secure Checkout With <span><img src="/Scrp1.png" className="img-fluid Scrp " alt="/" /> <img src="/Scrp2.png" className="img-fluid Scrp" alt="/" /> <img src="/Scrp3.png" className="img-fluid Scrp" alt="/" /> <img src="/Scrp4.png" className="img-fluid Scrp" alt="/" /> <img src="/Scrp5.png" className="img-fluid Scrp" alt="/" /></span></h6>
@@ -776,4 +834,4 @@ function Products_Details({ Detailes }) {
     );
 }
 
-export default Products_Details
+export default Products_Details;

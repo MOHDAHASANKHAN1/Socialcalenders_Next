@@ -10,8 +10,8 @@ function Update_Product(props) {
 
     const optionsindustry = [
         {
-            label: data.industry,
-            value: data.industry,
+            label: props.Casu.Sub,
+            value: props.Casu.Sub,
         },
         {
             label: "Social Media",
@@ -169,8 +169,8 @@ function Update_Product(props) {
 
     const optionscategory = [
         {
-            label: data.category[1],
-            value: data.category[1],
+            label: props.Casu.Cat,
+            value: props.Casu.Cat,
         },
         {
             label: "Templates",
@@ -218,9 +218,8 @@ function Update_Product(props) {
     today = dd + '/' + mm + '/' + yyyy;
 
     //start Courses variable
-    const [upid] = useState(data._id);
-    const [category, setCategory] = useState(data.category[1]);
-    const [industry, setIndustry] = useState(data.industry);
+    const [category, setCategory] = useState(props.Casu.Cat);
+    const [industry, setIndustry] = useState(props.Casu.Sub);
     const [tittle, setTittle] = useState(data.tittle);
     const [date, setDate] = useState(data.date);
     const [productaddername, setProductaddername] = useState(data.productaddername);
@@ -228,17 +227,11 @@ function Update_Product(props) {
     const [cprice, setCprice] = useState(data.cprice);
     const [productpath, setProductpath] = useState(data.productpath);
     const [description, setDescription] = useState(data.description);
-    const [imageurl] = useState(data.imageurl);
-    const [imageid] = useState(data.imageid);
-    const [image, setImage] = useState('');
+    const [image] = useState(data.image);
+    const oproductpath = data.productpath;
+    const oindustry = props.Casu.Sub;
+    const ocategory = props.Casu.Cat;
     //end Courses variable
-
-    console.log(imageurl[0])
-
-    const [fileData, setFileData] = useState("");
-    function getFile(e) {
-        setFileData(e.target.files);
-    };
 
     var incs = 2;
     const [upload, setUpload] = useState(false);
@@ -252,29 +245,26 @@ function Update_Product(props) {
             setInc(incs)
         }, 1000);
         const data = new FormData();
-        data.append("id", upid)
         data.append("category", category)
+        data.append("ocategory", ocategory)
         data.append("industry", industry)
+        data.append("oindustry", oindustry)
         data.append("tittle", tittle)
         data.append("date", date)
         data.append("productaddername", productaddername)
         data.append("oprice", oprice)
         data.append("cprice", cprice)
         data.append("productpath", productpath)
+        data.append("oproductpath", oproductpath)
         data.append("description", description)
-        data.append("imageurl", JSON.stringify(imageurl))
-        data.append("imageid", JSON.stringify(imageid))
-
-        for (let i = 0; i < fileData.length; i++) {
-            data.append("file" + i, fileData[i]);
-        }
+        data.append("image", JSON.stringify(image))
 
         axios
             .put('/api/Product', data)
             .then((res) => {
                 alert(res.data.message);
                 if (res.data.message === "Successfully Updated") {
-                    Router.push(`/Product/${res.data.productpath}`);
+                    Router.push(`/Product/${res.data.Red.cat}/${res.data.Red.sub}/${res.data.Red.path}`);
                     setUpload(false);
                 }
             }
@@ -449,7 +439,7 @@ function Update_Product(props) {
                                                 </select>
                                             </div>
 
-                                            <div className="mb-3 col-sm-6">
+                                            <div className="mb-3 col-sm-12">
                                                 <label>Product Path<n className="text-danger">*</n></label>
                                                 <input type="text" value={productpath} className="form-control" required
                                                     placeholder="Enter Product Path"
@@ -465,16 +455,6 @@ function Update_Product(props) {
                                                         setProductpath(str2);
                                                     }
                                                     )}
-                                                />
-                                            </div>
-
-                                            <div className="mb-3 col-sm-6">
-                                                <label>Product Images<n className="text-danger">*</n></label>
-                                                <input type="file" multiple value={image} className="form-control"
-                                                    onChange={(e) => {
-                                                        setImage(e.target.value);
-                                                        getFile(e);
-                                                    }}
                                                 />
                                             </div>
 

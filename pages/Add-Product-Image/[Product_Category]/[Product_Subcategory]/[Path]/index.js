@@ -1,11 +1,11 @@
-import Update_Product_Cmp from "../../Components/Update_Product";
+import Add_Product_Image_Cmp from "../../../../../Components/Add_Product_Image";
 import { parseCookies } from 'nookies';
 import axios from "axios";
-import Loader from '../../Components/Loader';
+import Loader from '../../../../../Components/Loader';
 import Router from 'next/router';
 import { useState } from "react";
 
-function Update_Product({ Product }) {
+function Add_Product({ Image_Update_Data }) {
 
     const Loding = () => {
         const [loading, setLoading] = useState(true);
@@ -19,7 +19,7 @@ function Update_Product({ Product }) {
         if (loading) {
             return (
                 <>
-                    <Update_Product_Cmp Detailes={Product} />
+                    <Add_Product_Image_Cmp Image_Update_Data={Image_Update_Data} />
 
                 </>
             );
@@ -58,24 +58,23 @@ export async function getServerSideProps(ctx) {
         res.end()
     }
 
-    const Product_Path = ctx.params.Updates_Product;
+    const { Product_Category, Product_Subcategory, Path } = ctx.params;
 
     const Data = await
-        axios.get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Path&Path=${Product_Path}`);
-    // axios.get(`http://localhost:3000/api/Product?By=Path&Path=${Product_Path}`);
+        // axios.get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Path&Path=${Product_Path}`);
+        axios.get(`http://localhost:3000/api/Product?By=Addimg&Path=${Path}&Category=${Product_Category}&SubCategory=${Product_Subcategory}`);
 
-    if (Data.data.Product === null) {
-        const { res } = ctx
+    if (Data.data.message !== "Found") {
+        const { res } = context
         res.writeHead(302, { Location: "/" })
         res.end()
     }
-
     return {
         props: {
-            Product: Data.data.Product
+            Image_Update_Data: Data.data.Image_Update_Data
         }
     }
 
 }
 
-export default Update_Product;
+export default Add_Product;

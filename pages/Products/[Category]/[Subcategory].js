@@ -1,11 +1,11 @@
 import Product_Base from "../../../Components/Product_Base";
 import axios from "axios";
 
-function Subcategory_M({ Data }) {
+function Subcategory_M({ Category, Countcat, Countsub }) {
 
     return (
         <>
-            <Product_Base Detailes={Data} />
+            <Product_Base Category={Category} Countcat={Countcat} Countsub={Countsub} />
         </>
     );
 }
@@ -16,18 +16,19 @@ export async function getServerSideProps(context) {
     const { Category, Subcategory } = context.params;
 
     const Data = await
-        axios.get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Subcategory&Category=${Category}&SubCategory=${Subcategory}`);
-    // axios.get(`http://localhost:3000/api/Product?By=Subcategory&Category=${Category}&SubCategory=${Subcategory}`);
+        // axios.get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Subcategory&Category=${Category}&SubCategory=${Subcategory}`);
+        axios.get(`http://localhost:3000/api/Product?By=Subcategory&Category=${Category}&SubCategory=${Subcategory}`);
 
-    if (Data.data.Subcategory.length === 0) {
+    if (Data.data.message !== "Found") {
         const { res } = context
         res.writeHead(302, { Location: "/" })
         res.end()
     }
-
     return {
         props: {
-            Data: Data.data.Subcategory
+            Category: Data.data.Subcategory,
+            Countcat: Data.data.Countcat,
+            Countsub: Data.data.Countsub
         }
     }
 

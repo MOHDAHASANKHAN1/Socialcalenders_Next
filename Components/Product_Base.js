@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import Router, { useRouter } from "next/router";
 import Loader from './Loader';
 
-const Loding = (props) => {
+const Loding = ({ Category }) => {
     const dispatch = useDispatch();
     const router = useRouter();
     const [loading, setLoading] = useState(true);
@@ -38,38 +38,45 @@ const Loding = (props) => {
     Router.onRouteChangeComplete = url => {
         setLoading(true);
     }
+
     if (loading) {
         return (
             <>
                 {
-                    props.data.map((data) =>
 
-                        <div className="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4 py-5 d-flex align-items-center justify-content-center" key={1}>
-                            <div className={`card card-ss show `} id={data._id}>
-                                <Link href={`/Product/${data.productpath}`}>
-                                    <a>
-                                        <div className="d-flex align-items-center justify-content-center ">
-                                            <div className=" cards-s d-flex align-items-center justify-content-center ">
-                                                <img src={data.imageurl[0]} className="card-img-top image-change" id={data.imageurl[1]} alt={data.imageurl[0]} />
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                                <div className="d-grid gap-2">
-                                    <button className={`btn btn-dark ${data._id}`} id="add" type="button" onClick={() => Add({ quantity: 1, id: data._id, url: data.imageurl[0], tittle: data.tittle, oprice: parseFloat(data.oprice), uprice: parseFloat(data.oprice), productpath: data.productpath })}><h5><b>Add To Cart</b></h5></button>
-                                </div>
-                                <div className="card-body">
-                                    <Link href={`/Product/${data.productpath}`}>
+                    Category.Subcategory.map((datas) =>
+
+                        datas.Product.map((data) =>
+
+                            <div className="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4 py-5 d-flex align-items-center justify-content-center" key={1}>
+                                <div className={`card card-ss show `} id={data._id}>
+                                    <Link href={`/Product/${Category.Category}/${datas.name}/${data.productpath}`}>
                                         <a>
-                                            <p className="text-muted text-center">Social Medial Calender</p>
-                                            <h5 className="card-title text-center">{data.tittle}</h5>
-                                            <h6 className="text-center text-muted"><del>{`$${data.cprice}`}</del><span className="text-danger px-2">{`$${data.oprice}`}</span></h6>
+                                            <div className="d-flex align-items-center justify-content-center ">
+                                                <div className=" cards-s d-flex align-items-center justify-content-center ">
+                                                    <img src={data.image[0].url} className="card-img-top image-change" id={data.image.length !== 1 ? data.image[1].url : data.image[0].url} alt={data.image[0].url} />
+                                                </div>
+                                            </div>
                                         </a>
                                     </Link>
+                                    <div className="d-grid gap-2">
+                                        <button className={`btn btn-dark ${data._id}`} id="add" type="button" onClick={() => Add({ quantity: 1, url: data.image[0].url, tittle: data.tittle, oprice: parseFloat(data.oprice), uprice: parseFloat(data.oprice), productpath: data.productpath, category: Category.Category, subcategory: datas.name })}><h5><b>Add To Cart</b></h5></button>
+                                    </div>
+                                    <div className="card-body">
+                                        <Link href={`/Product/${Category.Category}/${datas.name}/${data.productpath}`}>
+                                            <a>
+                                                <p className="text-muted text-center">Social Medial Calender</p>
+                                                <h5 className="card-title text-center">{data.tittle}</h5>
+                                                <h6 className="text-center text-muted"><del>{`$${data.cprice}`}</del><span className="text-danger px-2">{`$${data.oprice}`}</span></h6>
+                                            </a>
+                                        </Link>
+                                    </div>
                                 </div>
-                            </div>
-                        </div >
+                            </div >
+                        )
+
                     )
+
                 }
             </>
         );
@@ -82,219 +89,14 @@ const Loding = (props) => {
     }
 }
 
-function Product_Base(props) {
-    const data = props.Detailes;
-    const router = useRouter();
-    // const [categorylength, setCategorylength] = useState([]);
+function Product_Base({ Category, Countcat, Countsub }) {
 
+    const router = useRouter();
     useEffect(() => {
         $(".side").click(function () {
             $(`#sidebars`).toggle();
         });
     });
-
-    const optionsindustry = [
-        {
-            label: `Social Media`,
-            value: "Social-Media",
-        },
-        {
-            label: "Beauty",
-            value: "Beauty",
-        },
-        {
-            label: "Business",
-            value: "Business",
-        },
-        {
-            label: "Cars",
-            value: "Cars",
-        },
-        {
-            label: "Climate Change",
-            value: "Climate-Change",
-        },
-        {
-            label: "Coaching",
-            value: "Coaching",
-        },
-        {
-            label: "Cryptocurrency",
-            value: "Cryptocurrency",
-        },
-        {
-            label: "DIY",
-            value: "DIY",
-        },
-        {
-            label: "Education",
-            value: "Education",
-        },
-        {
-            label: "Empowerment",
-            value: "Empowerment",
-        },
-        {
-            label: "Events",
-            value: "Events",
-        },
-        {
-            label: "Fashion",
-            value: "Fashion",
-        },
-        {
-            label: "Finance",
-            value: "Finance",
-        },
-        {
-            label: "Fitness",
-            value: "Fitness",
-        },
-        {
-            label: "Floral",
-            value: "Floral",
-        },
-        {
-            label: "Food",
-            value: "Food",
-        },
-        {
-            label: "Gadering",
-            value: "Gadering",
-        },
-        {
-            label: "Happiness",
-            value: "Happiness",
-        },
-        {
-            label: "Health",
-            value: "Health",
-        },
-        {
-            label: "Holiday",
-            value: "Holiday",
-        },
-        {
-            label: "Home",
-            value: "Home",
-        },
-        {
-            label: "Lifestyle",
-            value: "Lifestyle",
-        },
-        {
-            label: "Marketing",
-            value: "Marketing",
-        },
-        {
-            label: "Music",
-            value: "Music",
-        },
-        {
-            label: "Sports",
-            value: "Sports",
-        },
-        {
-            label: "Nutrition",
-            value: "Nutrition",
-        },
-        {
-            label: "Pets",
-            value: "Pets",
-        },
-        {
-            label: "Podcast",
-            value: "Podcast",
-        },
-        {
-            label: "Real-Estate",
-            value: "Real-Estate",
-        },
-        {
-            label: "SPA",
-            value: "SPA",
-        },
-        {
-            label: "Sports",
-            value: "Sports",
-        },
-        {
-            label: "Therapy",
-            value: "Therapy",
-        },
-        {
-            label: "Travel",
-            value: "Travel",
-        },
-        {
-            label: "Universal",
-            value: "Universal",
-        },
-        {
-            label: "Wedding",
-            value: "Wedding",
-        },
-        {
-            label: "Wellness",
-            value: "Wellness",
-        },
-        {
-            label: "Women",
-            value: "Women",
-        },
-        {
-            label: "Yoga",
-            value: "Yoga",
-        }
-    ];
-
-    const optionscategory = [
-        {
-            label: "All Products",
-            value: "All",
-        },
-        {
-            label: "Templates",
-            value: "Templates",
-        },
-        {
-            label: "Calenders",
-            value: "Calenders",
-        },
-        {
-            label: "Planners",
-            value: "Books-Guides-And-Planners",
-        },
-        {
-            label: "Books And Guides",
-            value: "Books-Guides-And-Planners",
-        },
-        {
-            label: "Email Marketing Kits",
-            value: "Email-Marketing-Kits",
-        },
-        {
-            label: "Courses",
-            value: "Courses",
-        },
-        {
-            label: "Lead Magnets",
-            value: "Lead-Magnets",
-        },
-        {
-            label: "Challenges",
-            value: "Challenges",
-        },
-        {
-            label: "Covers",
-            value: "Covers",
-        },
-        {
-            label: "Super sale",
-            value: "Super-sale",
-        }
-    ];
-
 
     return (
         <>
@@ -317,8 +119,15 @@ function Product_Base(props) {
                             <div className="py-4">
                                 <h2 className='text-dark'><b>Products</b></h2>
                                 {
-                                    optionscategory.map((cate) =>
-                                        <Link passHref href={`/Products/${cate.value}/`} className='nav-link px-0' key={1}><a><h5 className='topics'>{cate.label}</h5></a></Link>
+                                    Countcat.map((cate) =>
+                                        <div className="row g-0">
+                                            <div className="col-sm-11 col-10 d-flex align-items-center justify-content-start">
+                                                <Link passHref href={`/Products/${cate.value}`} className='nav-link px-0' key={1}><a><h5 className='topics'>{cate.name}</h5></a></Link>
+                                            </div>
+                                            <div className=" col-sm-1 col-2 d-flex align-items-center justify-content-end">
+                                                <Link passHref href={`/Products/${cate.value}`} className='nav-link px-0' key={1}><a><h5 className='topics'>({cate.length})</h5></a></Link>
+                                            </div>
+                                        </div>
                                     )
                                 }
                             </div>
@@ -328,8 +137,15 @@ function Product_Base(props) {
                                     <div className="ps-content">
                                         <div className="pb-4">
                                             {
-                                                optionsindustry.map((cate) =>
-                                                    <Link passHref href={`/Products/${router.query.Category}/${cate.value}`} className='nav-link px-0' key={1}><a><h5 className='topics'>{cate.label}</h5></a></Link>
+                                                Countsub.map((data) =>
+                                                    <div className="row g-0">
+                                                        <div className="col-sm-11 col-10 d-flex align-items-center justify-content-start">
+                                                            <Link passHref href={`/Products/${router.query.Category}/${data.name}`} className='nav-link px-0' key={1}><a><h5 className='topics'>{data.name}</h5></a></Link>
+                                                        </div>
+                                                        <div className=" col-sm-1 col-2 d-flex align-items-center justify-content-end">
+                                                            <Link passHref href={`/Products/${router.query.Category}/${data.name}`} className='nav-link px-0' key={1}><a><h5 className='topics'>({data.len})</h5></a></Link>
+                                                        </div>
+                                                    </div>
                                                 )
                                             }
                                         </div>
@@ -344,7 +160,7 @@ function Product_Base(props) {
                 <div className="col-sm-9 com-md-9 col-12 col-lg-9">
 
                     <div className="row g-0">
-                        <Loding data={data} />
+                        <Loding Category={Category} />
                     </div>
 
                 </div>
@@ -361,8 +177,15 @@ function Product_Base(props) {
                                     <div className="ps-content">
                                         <div className="pb-4">
                                             {
-                                                optionscategory.map((cate) =>
-                                                    <Link passHref href={`/Products/${cate.value}/`} className='nav-link px-0' key={1}><a><h5 className='topics'>{cate.label}</h5></a></Link>
+                                                Countcat.map((cate) =>
+                                                    <div className="row g-0">
+                                                        <div className="col-sm-11 col-10 d-flex align-items-center justify-content-start">
+                                                            <Link passHref href={`/Products/${cate.value}`} className='nav-link px-0' key={1}><a><h5 className='topics'>{cate.name}</h5></a></Link>
+                                                        </div>
+                                                        <div className=" col-sm-1 col-2 d-flex align-items-center justify-content-end">
+                                                            <Link passHref href={`/Products/${cate.value}`} className='nav-link px-0' key={1}><a><h5 className='topics'>({cate.length})</h5></a></Link>
+                                                        </div>
+                                                    </div>
                                                 )
                                             }
                                         </div>
@@ -377,8 +200,15 @@ function Product_Base(props) {
                                 <div className="ps-content">
                                     <div className="pb-4">
                                         {
-                                            optionsindustry.map((cate) =>
-                                                <Link passHref href={`/Products/${router.query.Category}/${cate.value}`} className='nav-link px-0' key={1}><a><h5 className='topics'>{cate.label}</h5></a></Link>
+                                            Countsub.map((data) =>
+                                                <div className="row g-0">
+                                                    <div className="col-sm-11 col-10 d-flex align-items-center justify-content-start">
+                                                        <Link passHref href={`/Products/${router.query.Category}/${data.name}`} className='nav-link px-0' key={1}><a><h5 className='topics'>{data.name}</h5></a></Link>
+                                                    </div>
+                                                    <div className=" col-sm-1 col-2 d-flex align-items-center justify-content-end">
+                                                        <Link passHref href={`/Products/${router.query.Category}/${data.name}`} className='nav-link px-0' key={1}><a><h5 className='topics'>({data.len})</h5></a></Link>
+                                                    </div>
+                                                </div>
                                             )
                                         }
                                     </div>

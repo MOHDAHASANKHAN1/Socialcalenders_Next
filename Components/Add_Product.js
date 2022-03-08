@@ -236,6 +236,7 @@ function Add_Product() {
             setInc(incs)
         }, 1000);
         const data = new FormData();
+        data.append("By", "All")
         data.append("category", category)
         data.append("industry", industry)
         data.append("tittle", tittle)
@@ -253,7 +254,7 @@ function Add_Product() {
             .then((res) => {
                 alert(res.data.message);
                 if (res.data.message === "Successfully Added") {
-                    Router.push(`/Product/${res.data.productpath}`);
+                    Router.push(`/Product/${res.data.Red.cat}/${res.data.Red.sub}/${res.data.Red.path}`);
                     setUpload(false);
                 }
             });

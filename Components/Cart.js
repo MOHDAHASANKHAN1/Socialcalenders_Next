@@ -43,18 +43,18 @@ function Cart_Cmp() {
                             <img src={data.url}
                                 className="img-fluid rounded-3" alt="Cotton T-shirt" />
                         </div>
-                        <div className="col-md-4 col-lg-4 col-xl-4">
+                        <div className="col-md-4 col-lg-3 col-xl-3">
                             <p className="lead fw-normal mb-2">{data.tittle}</p>
                         </div>
-                        <div className="col-md-2 col-lg-3 col-xl-2 d-flex">
-                            <button className="btn btn-link px-2" onClick={() => Removeqt({ quantity: 1, id: data.id })}>
+                        <div className="col-md-2 col-lg-2 col-xl-2 d-flex">
+                            <button className="btn btn-link px-2" onClick={() => Removeqt({ quantity: 1, productpath: data.productpath })}>
                                 <i className="fas fa-minus"></i>
                             </button>
 
                             <input id="form1" min="0" name="quantity" value={data.quantity} type="number"
                                 className={`form-control form-control-sm`} />
 
-                            <button className={`btn btn-link px-2`} onClick={() => Addqt({ quantity: 1, id: data.id })} >
+                            <button className={`btn btn-link px-2`} onClick={() => Addqt({ quantity: 1, productpath: data.productpath })} >
                                 <i className="fas fa-plus"></i>
                             </button>
                         </div>
@@ -63,7 +63,7 @@ function Cart_Cmp() {
                         </div>
 
                         <div className="col-md-1 col-lg-1 col-xl-1 text-center">
-                            <a href="#!" className="text-dark" onClick={() => Router.push(`/Product/${data.productpath}`)}><i className="fa fa-eye fa-lg"></i></a>
+                            <a className="text-dark btn" onClick={() => Router.push(`/Product/${data.category}/${data.subcategory}/${data.productpath}`)}><i className="fa fa-eye fa-lg"></i></a>
                         </div>
 
                         <div className="col-md-1 col-lg-1 col-xl-1 text-end">
@@ -86,7 +86,7 @@ function Cart_Cmp() {
                                             <button type="button" className="btn btn-secondary text-dark" data-bs-dismiss="modal"><b>Cancel</b></button>
                                         </div>
                                         <div className=" col-sm-6 col-6 d-flex align-items-center justify-content-end px-4 pb-4">
-                                            <button type="submit" className="btn btn-danger" data-bs-dismiss="modal" onClick={() => Remove({ id: data.id })}><b>Remove</b></button>
+                                            <button type="submit" className="btn btn-danger" data-bs-dismiss="modal" onClick={() => Remove({ productpath: data.productpath })}><b>Remove</b></button>
                                         </div>
                                     </div>
                                 </div>
@@ -159,7 +159,7 @@ function Cart_Cmp() {
                                         <div className="card-body cart p-4">
                                             <div className="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" className="img-fluid mb-4 mr-3" />
                                                 <h3><strong><b>Your Cart is Empty</b></strong></h3>
-                                                <h4>Add something to make me happy :)</h4> <a href="#" className="btn btn-primary cart-btn-transform m-3 p-3" data-abc="true" onClick={() => Router.push("/Products/All")}><b>CONTINUE SHOPPING <span><i className='fas fa-long-arrow-alt-right px-2'></i></span></b></a>
+                                                <h4>Add something to make me happy :)</h4> <p onClick={() => Router.push("/Products/All")} className="btn btn-primary cart-btn-transform m-3 p-3" data-abc="true"><b>CONTINUE SHOPPING <span><i className='fas fa-long-arrow-alt-right px-2'></i></span></b></p>
                                             </div>
                                         </div>
                                     </div>
@@ -176,7 +176,7 @@ function Cart_Cmp() {
                                         <div className="card-body cart p-4">
                                             <div className="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" className="img-fluid mb-4 mr-3" />
                                                 <h3><strong><b>Your Cart is Empty</b></strong></h3>
-                                                <h4>Add something to make me happy :)</h4> <a href="#" className="btn btn-primary cart-btn-transform m-3 p-3" data-abc="true" onClick={() => Router.push("/Products/All")}><b>CONTINUE SHOPPING <span><i className='fas fa-long-arrow-alt-right px-2'></i></span></b></a>
+                                                <h4>Add something to make me happy :)</h4> <p onClick={() => Router.push("/Products/All")} className="btn btn-primary cart-btn-transform m-3 p-3" data-abc="true"><b>CONTINUE SHOPPING <span><i className='fas fa-long-arrow-alt-right px-2'></i></span></b></p>
                                             </div>
                                         </div>
                                     </div>
@@ -193,7 +193,7 @@ function Cart_Cmp() {
                                         <div className="card-body cart p-4">
                                             <div className="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" className="img-fluid mb-4 mr-3" />
                                                 <h3><strong><b>Your Cart is Empty</b></strong></h3>
-                                                <h4>Add something to make me happy :)</h4> <a href="#" className="btn btn-primary cart-btn-transform m-3 p-3" data-abc="true" onClick={() => Router.push("/Products/All")}><b>CONTINUE SHOPPING <span><i className='fas fa-long-arrow-alt-right px-2'></i></span></b></a>
+                                                <h4>Add something to make me happy :)</h4> <p onClick={() => Router.push("/Products/All")} className="btn btn-primary cart-btn-transform m-3 p-3" data-abc="true"><b>CONTINUE SHOPPING <span><i className='fas fa-long-arrow-alt-right px-2'></i></span></b></p>
                                             </div>
                                         </div>
                                     </div>
