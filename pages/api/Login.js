@@ -17,7 +17,7 @@ export default async function handler(req, res) {
                 const Token = jwt.sign({ userId: user._id }, process.env.Jwt_Secret, {
                     expiresIn: "7d"
                 })
-                res.send({ Token, role: user.role, message: "Login Successfull", id: user._id });
+                res.send({ Token, role: user.role, message: "Login Successfull", id: user._id, name: user.firstname + " " + user.lastname, email: user.email, phone: user.phone });
             } else {
                 res.send({ message: "Password Is Invalid", data: "" });
             }

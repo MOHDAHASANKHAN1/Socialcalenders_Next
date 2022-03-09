@@ -53,6 +53,9 @@ function Navbar() {
                                                 cookie.remove('Token');
                                                 cookie.remove('User_Role');
                                                 cookie.remove('id');
+                                                cookie.remove('name');
+                                                cookie.remove('email');
+                                                cookie.remove('phone');
                                                 Router.push('/Login');
                                             }}>Logout</a></li>
                                         </>
@@ -65,6 +68,9 @@ function Navbar() {
                                                 cookie.remove('Token');
                                                 cookie.remove('User_Role');
                                                 cookie.remove('id');
+                                                cookie.remove('name');
+                                                cookie.remove('email');
+                                                cookie.remove('phone');
                                                 Router.push('/Login');
                                             }}>Logout</a></li>
                                         </>

@@ -2,8 +2,12 @@ import { Remove_To_Cart, Addqts, Removeqts } from "../Redux/Action/Cart";
 import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { parseCookies } from 'nookies';
+import axios from "axios";
 
 function Cart_Cmp() {
+
+    const { Token, name, email, phone } = parseCookies();
 
     const dispatch = useDispatch();
     const Router = useRouter();
@@ -32,6 +36,66 @@ function Cart_Cmp() {
         refresh();
     }
 
+    const initializeRazorpay = () => {
+        return new Promise((resolve) => {
+            const script = document.createElement("script");
+            script.src = "https://checkout.razorpay.com/v1/checkout.js";
+
+            script.onload = () => {
+                resolve(true);
+            };
+            script.onerror = () => {
+                resolve(false);
+            };
+
+            document.body.appendChild(script);
+        });
+    };
+
+    const makePayment = async () => {
+        if (!Token) {
+            alert("You Are Not Signuped/Logged Please Signup/Login");
+            Router.push("/Login");
+        } else {
+            const res = await initializeRazorpay();
+
+            if (!res) {
+                alert("Razorpay SDK Failed to load");
+                return;
+            }
+
+            // Make API call to the serverless API
+            const Data = await
+                axios.post(`/api/Razorpay`, { price: Totalprice });
+
+            const data = Data.data;
+
+            var options = {
+                key: process.env.Rozarpay_Key_Id, // Enter the Key ID generated from the Dashboard
+                name: "SocialCalender Pvt Ltd",
+                currency: data.currency,
+                amount: data.amount,
+                order_id: data.id,
+                description: "Thankyou For Your Believe",
+                image: "https://res.cloudinary.com/technicalknowledges/image/upload/v1646823557/know1_mct3qm.jpg",
+                handler: function (response) {
+                    // Validate payment at server - using webhooks is a better idea.
+                    alert(response.razorpay_payment_id);
+                    alert(response.razorpay_order_id);
+                    alert(response.razorpay_signature);
+                },
+                prefill: {
+                    name: name,
+                    email: email,
+                    contact: phone,
+                },
+            };
+
+            const paymentObject = new window.Razorpay(options);
+            paymentObject.open();
+        }
+    };
+
 
     var Cart;
     Cart = data.map((data) =>
@@ -59,7 +123,7 @@ function Cart_Cmp() {
                             </button>
                         </div>
                         <div className="col-md-2 col-lg-2 col-xl-2 offset-lg-1">
-                            <h5 className="mb-0">{`$${data.uprice}`}</h5>
+                            <h5 className="mb-0">  <i class="fa-solid fa-indian-rupee-sign"></i> {`${data.uprice}`}</h5>
                         </div>
 
                         <div className="col-md-1 col-lg-1 col-xl-1 text-center">
@@ -97,7 +161,7 @@ function Cart_Cmp() {
                 </div>
             </div>
         </>
-    )
+    );
 
     return (
         <>
@@ -133,10 +197,10 @@ function Cart_Cmp() {
                                         <div className="card-body">
                                             <div className="row g-0">
                                                 <div className="col-sm-6 col-6 d-flex align-items-center justify-content-start">
-                                                    <button type="button" className="btn btn-warning btn-block btn-lg"><b>Proceed to Pay</b></button>
+                                                    <button type="button" className="btn btn-warning btn-block btn-lg" onClick={() => makePayment()} ><b>Proceed to Pay</b></button>
                                                 </div>
                                                 <div className=" col-sm-6 col-6 d-flex align-items-center justify-content-end">
-                                                    <span className="mb-0 h5 text-info">{`Total $${Totalprice}`}</span>
+                                                    <span className="mb-0 h5 text-info">Total <i class="fa-solid fa-indian-rupee-sign"></i> {Totalprice}</span>
                                                 </div>
                                             </div>
                                         </div>

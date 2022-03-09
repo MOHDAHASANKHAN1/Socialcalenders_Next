@@ -205,7 +205,7 @@ function Products_Details({ Detailes, Casu }) {
                                         </fieldset>
                                         <h6 className="text-muted p-1">No Reviews</h6>
                                     </div>
-                                    <h6 className="h5 text-muted"><del>{`$${Product.cprice}`}</del><span className="h4 text-dark px-2">{`$${Product.oprice}`}</span><span className="h5 text-white rounded-2 bg-success px-3"><b>{`${parseInt(discount)}% OFF`}</b></span></h6>
+                                    <h6 className="h5 text-muted"><del><i class="fa-solid h6 fa-indian-rupee-sign"></i>{`${Product.cprice}`}</del><span className="h4 text-dark px-2"><i class="fa-solid h5 fa-indian-rupee-sign"></i>{`${Product.oprice}`}</span><span className="h5 text-white rounded-2 bg-success px-3"><b>{`${parseInt(discount)}% OFF`}</b></span></h6>
                                     <br />
 
                                     {Parser(Product.description)}

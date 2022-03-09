@@ -11,11 +11,12 @@ function Profile(props) {
     const [firstname, setFirstname] = useState(data.firstname);
     const [lastname, setLastname] = useState(data.lastname);
     const [email, setEmail] = useState(data.email);
+    const [mobilenumber, setMobilenumber] = useState(data.phone);
     const [upid] = useState(data._id);
     //end user data variabel
 
     function Updateuser() {
-        const data = { _id: upid, firstname: firstname, lastname: lastname, email: email };
+        const data = { _id: upid, firstname: firstname, lastname: lastname, email: email, phone: mobilenumber };
         axios
             .post('/api/User', data)
             .then((res) => {
@@ -49,7 +50,8 @@ function Profile(props) {
                                                 <div className="col-md-6"><h6 className="h6s">Surname</h6><input type="text" className="form-control" value={lastname} placeholder="surname" onChange={(e) => setLastname(e.target.value)} /></div>
                                             </div>
                                             <div className="row mt-3">
-                                                <div className="col-md-12"><h6 className="h6s">Email ID</h6><input type="text" className="form-control" placeholder="enter email id" value={email} onChange={(e) => setEmail(e.target.value)} /></div>
+                                                <div className="col-md-6"><h6 className="h6s">Email ID</h6><input type="text" className="form-control" placeholder="enter email id" value={email} onChange={(e) => setEmail(e.target.value)} /></div>
+                                                <div className="col-md-6"><h6 className="h6s">Mobile Number</h6><input type="text" className="form-control" placeholder="enter email id" value={mobilenumber} onChange={(e) => setMobilenumber(e.target.value)} /></div>
                                             </div>
                                             <div className="row mt-3">
                                                 <div className="col-md-6"><h6 className="h6s">Country</h6><input type="text" className="form-control" placeholder="country" value="India" /></div>
@@ -105,7 +107,8 @@ function Profile(props) {
                                                 <div className="col-md-6"><h6 className="h6s">Surname</h6><input type="text" className="form-control" value={data.lastname} placeholder="surname" /></div>
                                             </div>
                                             <div className="row mt-3">
-                                                <div className="col-md-12"><h6 className="h6s">Email ID</h6><input type="text" className="form-control" placeholder="enter email id" value={data.email} /></div>
+                                                <div className="col-md-6"><h6 className="h6s">Email ID</h6><input type="text" className="form-control" placeholder="enter email id" value={email} onChange={(e) => setEmail(e.target.value)} /></div>
+                                                <div className="col-md-6"><h6 className="h6s">Mobile Number</h6><input type="text" className="form-control" placeholder="enter email id" value={mobilenumber} onChange={(e) => setMobilenumber(e.target.value)} /></div>
                                             </div>
                                             <div className="row mt-3">
                                                 <div className="col-md-6"><h6 className="h6s">Country</h6><input type="text" className="form-control" placeholder="country" value="India" /></div>

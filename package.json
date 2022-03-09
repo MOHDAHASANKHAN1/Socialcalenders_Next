@@ -22,6 +22,7 @@
     "next-connect": "^0.12.1",
     "next-redux-wrapper": "^7.0.5",
     "nookies": "^2.5.2",
+    "razorpay": "^2.8.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-hook-form": "^7.27.0",
@@ -30,7 +31,8 @@
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
     "redux-persist": "^6.0.0",
-    "redux-thunk": "^2.4.1"
+    "redux-thunk": "^2.4.1",
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "eslint": "8.8.0",

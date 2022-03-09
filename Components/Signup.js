@@ -23,6 +23,9 @@ function Signup() {
                     cookie.set('Token', res.data.Token);
                     cookie.set('User_Role', res.data.role);
                     cookie.set('id', res.data.id);
+                    cookie.set('name', res.data.name);
+                    cookie.set('email', res.data.email);
+                    cookie.set('phone', res.data.phone);
                     Router.push("/Account");
                 }
             });
@@ -32,8 +35,8 @@ function Signup() {
         <section className="bg-image" style={{ backgroundImage: "url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp')" }}>
             <div className="mask d-flex align-items-center h-100 gradient-custom-3">
                 <div className="container py-5">
-                <br />
-            <br />
+                    <br />
+                    <br />
                     <div className="row d-flex justify-content-center align-items-center">
                         <div className="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div className="card" style={{ borderRadius: "15px" }}>
@@ -82,6 +85,20 @@ function Signup() {
                                                 })}
                                             />
                                             <label className="form-label" htmlFor="form3Example3cg">{errors.email ? errors.email.message : `Your Email`}</label>
+                                        </div>
+
+                                        <div className="form-outline mb-4">
+                                            <input type="text" className={classNames("form-control ", { "is-invalid": errors.mobilenumber }
+                                            )}
+                                                {...register("mobilenumber", {
+                                                    required: "Your Mobile Number Required Please Enter Mo. No.",
+                                                    pattern: {
+                                                        value: /[789]{1}[0-9]{9}/,
+                                                        message: "Please Enter Valid Mobile Number"
+                                                    }
+                                                })}
+                                            />
+                                            <label className="form-label" htmlFor="form3Example3cg">{errors.mobilenumber ? errors.mobilenumber.message : `Your Phone No.`}</label>
                                         </div>
 
                                         <div className="form-outline mb-4">
@@ -135,7 +152,7 @@ function Signup() {
                         </div>
                     </div>
                     <br />
-            <br /><br />
+                    <br /><br />
                 </div>
             </div>
         </section>

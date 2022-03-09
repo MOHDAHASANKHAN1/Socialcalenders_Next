@@ -18,6 +18,9 @@ function Login() {
                     cookie.set('Token', res.data.Token);
                     cookie.set('User_Role', res.data.role);
                     cookie.set('id', res.data.id);
+                    cookie.set('name', res.data.name);
+                    cookie.set('email', res.data.email);
+                    cookie.set('phone', res.data.phone);
                     Router.push("/Account");
                 }
             });
@@ -27,10 +30,10 @@ function Login() {
     return (
         <>
             <section className="py-5 container">
-            <br />
-            <br />
-            <br />
-            <br />
+                <br />
+                <br />
+                <br />
+                <br />
                 <div className="container-fluid h-custom">
                     <div className="row d-flex justify-content-center align-items-center h-100">
                         <div className="col-md-9 col-lg-6 col-xl-5">
@@ -98,10 +101,10 @@ function Login() {
                     </div>
                 </div>
                 <br />
-            <br />
-            <br />
-            <br />
-            <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </section>
         </>
     );
