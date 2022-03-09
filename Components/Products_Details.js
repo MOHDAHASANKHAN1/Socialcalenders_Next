@@ -234,7 +234,7 @@ function Products_Details({ Detailes, Casu }) {
                                                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div className="modal-body">
-                                                                <p className="text-muted"><b>Are you sure you want to delete the selected Product?</b></p>
+                                                                <p className="text-muted"><b>Are you sure you want to delete the selected Product ?</b></p>
                                                             </div>
                                                             <hr className="bg-dark" />
                                                             <div className="row g-0">
