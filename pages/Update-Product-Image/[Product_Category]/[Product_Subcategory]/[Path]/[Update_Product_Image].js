@@ -61,8 +61,7 @@ export async function getServerSideProps(ctx) {
     const { Product_Category, Product_Subcategory, Path, Update_Product_Image } = ctx.params;
 
     const Data = await
-        axios.get(`https://socialsmediacalendar.herokuapp.com//api/Product?By=Updateimg&Path=${Path}&id=${Update_Product_Image}&Category=${Product_Category}&SubCategory=${Product_Subcategory}`);
-    // axios.get(`http://localhost:3000/api/Product?By=Updateimg&Path=${Path}&id=${Update_Product_Image}&Category=${Product_Category}&SubCategory=${Product_Subcategory}`);
+        axios.get(`${process.env.Api_Base_Url}/api/Product?By=Updateimg&Path=${Path}&id=${Update_Product_Image}&Category=${Product_Category}&SubCategory=${Product_Subcategory}`);
 
     if (Data.data.message !== "Found") {
         const { res } = ctx

@@ -27,9 +27,9 @@ export const config = {
 };
 
 cloudinary.config({
-  cloud_name: 'technicalknowledges',
-  api_key: '458992828633173',
-  api_secret: 'wFtu-vpbkdCDhuOtH6S9dXcBTiE',
+  cloud_name: process.env.Cloudinary_Cloud_Name,
+  api_key: process.env.Cloudinary_Aai_Key,
+  api_secret: process.env.Cloudinary_Api_Secret,
   secure: true
 });
 

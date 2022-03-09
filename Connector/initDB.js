@@ -5,7 +5,7 @@ function initDB() {
         console.log("alredy connected")
         return
     }
-    mongoose.connect("mongodb+srv://ahsan:ahsan@cluster0.wstmu.mongodb.net/Products?retryWrites=true&w=majority", {
+    mongoose.connect(process.env.Mongo_Uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })

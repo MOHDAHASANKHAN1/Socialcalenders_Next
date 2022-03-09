@@ -16,8 +16,7 @@ export async function getServerSideProps(context) {
     const { Category, Subcategory } = context.params;
 
     const Data = await
-        axios.get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Subcategory&Category=${Category}&SubCategory=${Subcategory}`);
-    // axios.get(`http://localhost:3000/api/Product?By=Subcategory&Category=${Category}&SubCategory=${Subcategory}`);
+        axios.get(`${process.env.Api_Base_Url}/api/Product?By=Subcategory&Category=${Category}&SubCategory=${Subcategory}`);
 
     if (Data.data.message !== "Found") {
         const { res } = context
