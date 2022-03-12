@@ -61,7 +61,7 @@ function Navbar() {
                                         </>
                                         :
                                         <>
-                                            <li className="nav-item"><Link href="/Blog"><a className="nav-link  ">Blog</a></Link></li>
+                                            <li className="nav-item"><a href="https://technicalknowledge.herokuapp.com/" className="nav-link  ">Blog</a></li>
                                             <li className="nav-item"><Link href="/Affiliate"><a className="nav-link  ">Affiliate</a></Link></li>
                                             <li className="nav-item"><Link href="/Profile"><a className="nav-link">Profile</a></Link></li>
                                             <li className="nav-item"><a className="nav-link btn" onClick={() => {
@@ -77,7 +77,7 @@ function Navbar() {
                                         :
 
                                         <>
-                                            <li className="nav-item"><Link href="/Blog"><a className="nav-link  ">Blog</a></Link></li>
+                                            <li className="nav-item"><a href="https://technicalknowledge.herokuapp.com/" className="nav-link  ">Blog</a></li>
                                             <li className="nav-item"><Link href="/Affiliate"><a className="nav-link  ">Affiliate</a></Link></li>
                                             <li className="nav-item"><Link href="/Contact"><a className="nav-link  ">Contact</a></Link></li>
                                         </>

@@ -20,6 +20,12 @@ body {
   width: 350px;
 }
 
+.card-sss{
+  padding-top: 2rem;
+  box-shadow: 6px 6px 10px 6px rgba(22, 22, 26, 0.18);
+  border: none;
+}
+
 .scroll-area-sm-sides {
     height: 200px;
     overflow-x: hidden
@@ -316,7 +322,6 @@ background-color: #e0e0e0;
   padding-left: 3%;
   padding-top: 2.5%;
 }
-
 .cards-s {
   width: 100%;
   height: 27rem;
@@ -679,32 +684,5 @@ padding: 2.50%;
   height: 20rem;
 }
 
-.carousel-inner {
-  padding: 1em;
-}
 
-.card{
-padding-top: 2rem;
-  box-shadow: 2px 6px 8px 0px rgba(22, 22, 26, 0.18);
-  border: none;
 
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: #e1e1e1;
-  width: 6vh;
-  height: 6vh;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.carousel-item {
-    margin-right: 0;
-    flex: 0 0 33.333333%;
-    display: block;
-  }
-  .carousel-inner {
-    display: flex;
-  } 

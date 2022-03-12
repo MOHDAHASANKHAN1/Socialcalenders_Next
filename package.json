@@ -28,6 +28,7 @@
     "react-hook-form": "^7.27.0",
     "react-html-parser": "^2.0.2",
     "react-loading-skeleton": "^3.0.3",
+    "react-multi-carousel": "^2.8.0",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
     "redux-persist": "^6.0.0",

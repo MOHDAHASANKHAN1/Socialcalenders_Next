@@ -49,7 +49,7 @@ const Loding = ({ Category }) => {
                         datas.Product.map((data) =>
 
                             <div className="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4 py-5 d-flex align-items-center justify-content-center" key={1}>
-                                <div className={`card card-ss show `} id={data._id}>
+                                <div className={`card card-sss card-ss show `} id={data._id}>
                                     <Link href={`/Product/${Category.Category}/${datas.name}/${data.productpath}`}>
                                         <a>
                                             <div className="d-flex align-items-center justify-content-center ">
