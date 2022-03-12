@@ -67,7 +67,7 @@ const Loding = ({ Category }) => {
                                             <a>
                                                 <p className="text-muted text-center">Social Medial Calender</p>
                                                 <h5 className="card-title text-center">{data.tittle}</h5>
-                                                <h6 className="text-center text-muted h6"><del><i class="fa-solid h6 fa-indian-rupee-sign"></i>{`${data.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign"></i>{`${data.oprice}`}</span></h6>
+                                                <h6 className="text-center text-muted h6"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.oprice}`}</span></h6>
                                             </a>
                                         </Link>
                                     </div>

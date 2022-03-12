@@ -8,6 +8,28 @@ import axios from "axios";
 import { Add_To_Cart } from "../Redux/Action/Cart";
 import { useDispatch } from "react-redux";
 import Loader from './Loader';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const responsive = {
+    superLargeDesktop: {
+        // the naming can be any, depends on you.
+        breakpoint: { max: 4000, min: 3000 },
+        items: 5
+    },
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 5
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1
+    }
+};
 
 function Products_Details({ Detailes, Casu }) {
 
@@ -32,29 +54,14 @@ function Products_Details({ Detailes, Casu }) {
         data.append("reviewtittle", reviewtittle);
         data.append("review", review);
     }
+    const [deta, setDeta] = useState([]);
 
     useEffect(() => {
-        var carouselWidth = $(".carousel-inner")[0].scrollWidth;
-        var cardWidth = $(".carousel-item").width();
-        var scrollPosition = 0;
-        $("#carouselExampleControls-fourth .carousel-control-next").on("click", function () {
-            if (scrollPosition < carouselWidth - cardWidth * 4) {
-                scrollPosition += cardWidth;
-                $("#carouselExampleControls-fourth .carousel-inner").animate(
-                    { scrollLeft: scrollPosition },
-                    600
-                );
-            }
-        });
-        $("#carouselExampleControls-fourth .carousel-control-prev").on("click", function () {
-            if (scrollPosition > 0) {
-                scrollPosition -= cardWidth;
-                $("#carouselExampleControls-fourth .carousel-inner").animate(
-                    { scrollLeft: scrollPosition },
-                    600
-                );
-            }
-        });
+        axios
+            .get(`http://localhost:3000/api/Product?By=Category&Category=${router.query.Product_Category}`)
+            .then((deta) => {
+                setDeta(deta.data.Category.Subcategory);
+            });
 
         $(".image-change").click(function () {
             $("#main-image").attr("src", $(this).attr("src"));
@@ -600,222 +607,43 @@ function Products_Details({ Detailes, Casu }) {
                                     <h1><b>You May Also Like</b></h1>
                                 </div>
                                 <div className="col-sm-6 d-flex justify-content-end">
-                                    <Link href="/All-Industries">
+                                    <Link href={`/Products/${router.query.Product_Category}`}>
                                         <a>
                                             <h5 className="text-muted"><b>View All Products <i className="fas fa-chevron-right"></i></b></h5>
                                         </a>
                                     </Link>
                                 </div>
                             </div>
+                            <Carousel responsive={responsive} className="py-4">
+                                {
 
-                            <div id="carouselExampleControls-fourth" className="carousel" data-bs-ride="carousel">
-                                <div className="carousel-inner">
+                                    deta.map((datas) =>
 
-                                    <div className="carousel-item active">
-                                        <div className="d-flex">
-                                            <Link href="/Products-By-Category/All-Products/Happiness">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Real-State-Book.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">300 Real Estate Templates For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
+                                        datas.Product.map((data) =>
+                                            <div className="px-3">
+                                                <Link href={`/Product/${router.query.Product_Category}/${datas.name}/${data.productpath}`} >
+                                                    <a>
+                                                        <div className="card card-sss d-flex align-items-center justify-content-center mx-1" >
+                                                            <div className="img-wrapper-s"><img src={data.image[0].url} className="d-block w-100" alt="..." /> </div>
+                                                            <div className="card-body">
+                                                                <h5 className="card-title text-center">{data.tittle}</h5>
+                                                                <h6 className="text-center text-muted"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.oprice}`}</span></h6>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                            <Link href="/Products-By-Category/All-Products/Social-Media">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Women.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$59.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
+                                                    </a>
+                                                </Link>
+                                            </div>
+                                        )
 
-                                    <div className="carousel-item">
-                                        <div className="d-flex">
-                                            <Link href="/Products-By-Category/All-Products/Holiday">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Mind.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">300 Mindfullness Templates For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                            <Link href="/Products-By-Category/All-Products/Holiday">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Mind.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">email marketing kits</h5>
-                                                            <h6 className="text-center text-muted"><del>$199.00</del><span className="text-danger px-2">$99.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
+                                    )
 
-                                    <div className="carousel-item">
-                                        <div className="d-flex">
-                                            <Link href="/Products-By-Category/All-Products/Holiday">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Crypto.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                            <Link href="/Products-By-Category/All-Products/Real-Estate">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Oil.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
+                                }
 
-                                    <div className="carousel-item">
-                                        <div className="d-flex">
-                                            <Link href="/Products-By-Category/All-Products/Holiday">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Candle.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                            <Link href="/Products-By-Category/All-Products/Real-Estate">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Jewelry.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
-
-
-                                    <div className="carousel-item">
-                                        <div className="d-flex">
-                                            <Link href="/Products-By-Category/All-Products/Holiday">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Mind.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                            <Link href="/Products-By-Category/All-Products/Real-Estate">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Email.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
-
-                                    <div className="carousel-item">
-                                        <div className="d-flex">
-                                            <Link href="/Products-By-Category/All-Products/Holiday">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Crypto.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                            <Link href="/Products-By-Category/All-Products/Real-Estate">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Oil.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
-
-                                    <div className="carousel-item">
-                                        <div className="d-flex">
-                                            <Link href="/Products-By-Category/All-Products/Holiday">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Real-State-Book.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                            <Link href="/Products-By-Category/All-Products/Real-Estate">
-                                                <a>
-                                                    <div className="card cards-s d-flex align-items-center justify-content-center">
-                                                        <div className="img-wrapper-s"><img src="/Women.png" className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">200 Empowering Women Templates Bundle For Social Media</h5>
-                                                            <h6 className="text-center text-muted"><del>$189.00</del><span className="text-danger px-2">$49.00</span></h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls-fourth" data-bs-slide="prev">
-                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span className="visually-hidden">Previous</span>
-                                </button>
-                                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls-fourth" data-bs-slide="next">
-                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span className="visually-hidden">Next</span>
-                                </button>
-                            </div>
+                            </Carousel>
                         </div>
 
                         <br /><br /><br /><br />
                     </div>
-
                 </>
             );
         } else {

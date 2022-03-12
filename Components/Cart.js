@@ -1,9 +1,32 @@
 import { Remove_To_Cart, Addqts, Removeqts } from "../Redux/Action/Cart";
 import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { parseCookies } from 'nookies';
 import axios from "axios";
+import Link from "next/link";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const responsive = {
+    superLargeDesktop: {
+        // the naming can be any, depends on you.
+        breakpoint: { max: 4000, min: 3000 },
+        items: 5
+    },
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 5
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1
+    }
+};
 
 function Cart_Cmp() {
 
@@ -96,7 +119,6 @@ function Cart_Cmp() {
         }
     };
 
-
     var Cart;
     Cart = data.map((data) =>
         <>
@@ -163,53 +185,96 @@ function Cart_Cmp() {
         </>
     );
 
+    const [deta, setDeta] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get(`http://localhost:3000/api/Product?By=Category&Category=All`)
+            .then((deta) => {
+                setDeta(deta.data.Category.Subcategory);
+            });
+    }, [])
+
     return (
         <>
             {
                 data.length !== 0 ?
-                    <section className="h-100" style={{ backgroundColor: " #ccff33" }}>
-                        <div className="container-fluid h-100 py-5">
-                            <div className="row d-flex justify-content-center align-items-center h-100">
-                                <div className="col-10">
+                    <>
+                        <section className="h-100" style={{ backgroundColor: " #ccff33" }}>
+                            <div className="container-fluid h-100 py-5">
+                                <div className="row d-flex justify-content-center align-items-center h-100">
+                                    <div className="col-10">
 
-                                    <div className="d-flex justify-content-between align-items-center mb-4 px-3">
-                                        <h3 className="fw-normal mb-0 text-black ">Shopping Cart</h3>
-                                        <div>
-                                            <p className="mb-0"><span className="text-muted">Sort by:</span> <a href="#!" className="text-body">price <i
-                                                className="fas fa-angle-down mt-1"></i></a></p>
-                                        </div>
-                                    </div>
-
-                                    {Cart}
-
-                                    <div className="card mb-4">
-                                        <div className="card-body p-4 d-flex flex-row">
-                                            <div className="form-outline flex-fill">
-                                                <input placeholder="Discound code" type="text" id="form1" className="form-control form-control-lg" />
-                                            </div>
-                                            <button type="button" className="btn btn-outline-warning btn-lg ms-3">Apply</button>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div className="card">
-                                        <div className="card-body">
-                                            <div className="row g-0">
-                                                <div className="col-sm-6 col-6 d-flex align-items-center justify-content-start">
-                                                    <button type="button" className="btn btn-warning btn-block btn-lg" onClick={() => makePayment()} ><b>Proceed to Pay</b></button>
-                                                </div>
-                                                <div className=" col-sm-6 col-6 d-flex align-items-center justify-content-end">
-                                                    <span className="mb-0 h5 text-info">Total <i class="fa-solid fa-indian-rupee-sign"></i> {Totalprice}</span>
-                                                </div>
+                                        <div className="d-flex justify-content-between align-items-center mb-4 px-3">
+                                            <h3 className="fw-normal mb-0 text-black ">Shopping Cart</h3>
+                                            <div>
+                                                <p className="mb-0"><span className="text-muted">Sort by:</span> <a href="#!" className="text-body">price <i
+                                                    className="fas fa-angle-down mt-1"></i></a></p>
                                             </div>
                                         </div>
-                                    </div>
 
+                                        {Cart}
+
+                                        <div className="card mb-4">
+                                            <div className="card-body p-4 d-flex flex-row">
+                                                <div className="form-outline flex-fill">
+                                                    <input placeholder="Discound code" type="text" id="form1" className="form-control form-control-lg" />
+                                                </div>
+                                                <button type="button" className="btn btn-outline-warning btn-lg ms-3">Apply</button>
+                                            </div>
+                                        </div>
+
+                                        <div className="card">
+                                            <div className="card-body">
+                                                <div className="row g-0">
+                                                    <div className="col-sm-6 col-6 d-flex align-items-center justify-content-start">
+                                                        <button type="button" className="btn btn-warning btn-block btn-lg" onClick={() => makePayment()} ><b>Proceed to Pay</b></button>
+                                                    </div>
+                                                    <div className=" col-sm-6 col-6 d-flex align-items-center justify-content-end">
+                                                        <span className="mb-0 h5 text-info">Total <i class="fa-solid fa-indian-rupee-sign"></i> {Totalprice}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                        <br />
+                        <br />
+
+                        <h1 className="text-center"><b>ADD THESE TO YOUR ORDER FOR THE BEST VALUE</b></h1>
+
+                        <Carousel responsive={responsive} className="py-4">
+                            {
+
+                                deta.map((datas) =>
+
+                                    datas.Product.map((data) =>
+                                        <div className="px-3">
+                                            <Link href={`/Product/All/${datas.name}/${data.productpath}`} >
+                                                <a>
+                                                    <div className="card card-sss d-flex align-items-center justify-content-center mx-1" >
+                                                        <div className="img-wrapper-s"><img src={data.image[0].url} className="d-block w-100" alt="..." /> </div>
+                                                        <div className="card-body">
+                                                            <h5 className="card-title text-center">{data.tittle}</h5>
+                                                            <h6 className="text-center text-muted"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.oprice}`}</span></h6>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </Link>
+                                        </div>
+                                    )
+
+                                )
+
+                            }
+
+                        </Carousel>
+                        <br />
+                        <br />
+                    </>
                     :
 
                     <>
