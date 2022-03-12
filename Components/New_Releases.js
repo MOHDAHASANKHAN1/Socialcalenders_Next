@@ -44,7 +44,7 @@ function New_Releases() {
                     </Link>
                 </div>
             </div>
-            <Carousel responsive={responsive} className="p-4">
+            <Carousel responsive={responsive} className="py-4">
 
                 <div className="px-2">
                     <Link href="/Products/All/Happiness">
