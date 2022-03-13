@@ -30,7 +30,6 @@ function Best_Sellers() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        alert("called")
         axios
             .get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Category&Category=All`)
             .then((deta) => {
