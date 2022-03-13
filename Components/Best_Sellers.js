@@ -30,6 +30,7 @@ function Best_Sellers() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        alert("called")
         axios
             .get(`http://localhost:3000/api/Product?By=Category&Category=All`)
             .then((deta) => {
