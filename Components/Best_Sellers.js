@@ -35,7 +35,7 @@ function Best_Sellers() {
             .then((deta) => {
                 setData(deta.data.Category.Subcategory);
             });
-    }, [useRouter()])
+    })
 
 
     return (
