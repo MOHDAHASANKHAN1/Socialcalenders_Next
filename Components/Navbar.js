@@ -48,7 +48,7 @@ function Navbar() {
                                     Token ? User_Role === "Admin" ?
                                         <>
                                             <li className="nav-item"><Link href="/Add-Product"><a className="nav-link ">Add</a></Link></li>
-                                            <li className="nav-item"><Link href="/Profile"><a className="nav-link ">Profile</a></Link></li>
+                                            <li className="nav-item"><Link href="/Messages"><a className="nav-link ">Messages</a></Link></li>
                                             <li className="nav-item"><a className="nav-link btn" onClick={() => {
                                                 cookie.remove('Token');
                                                 cookie.remove('User_Role');
@@ -63,7 +63,7 @@ function Navbar() {
                                         <>
                                             <li className="nav-item"><a href="https://technicalknowledge.herokuapp.com/" className="nav-link  ">Blog</a></li>
                                             <li className="nav-item"><Link href="/Affiliate"><a className="nav-link  ">Affiliate</a></Link></li>
-                                            <li className="nav-item"><Link href="/Profile"><a className="nav-link">Profile</a></Link></li>
+                                            <li className="nav-item"><Link href="/Contact"><a className="nav-link  ">Contact</a></Link></li>
                                             <li className="nav-item"><a className="nav-link btn" onClick={() => {
                                                 cookie.remove('Token');
                                                 cookie.remove('User_Role');
@@ -89,7 +89,7 @@ function Navbar() {
                                 <Link href="/">
                                     <a><i className="fas fa-search h4 px-2"></i></a>
                                 </Link>
-                                <Link href="/Account">
+                                <Link href="/Profile">
                                     <a><i className="far fa-user h4 px-2"></i></a>
                                 </Link>
                                 <Link href="/Cart">

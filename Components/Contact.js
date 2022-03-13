@@ -22,15 +22,14 @@ export default function Contact() {
         if (format1.test(email) && format2.test(email)) {
           const data = {
             name: name,
-            message: message,
             email: email,
-            postid: "Messages From Contact"
+            message: message
           };
 
           axios
-            .post("https://technicalknowledge-backends.herokuapp.com/Contactus/Add", data)
+            .post("/api/Messages", data)
             .then((res) => {
-              alert(res.data);
+              alert(res.data.message);
             });
         } else {
           alert("Please Enter A Valid Email Address")

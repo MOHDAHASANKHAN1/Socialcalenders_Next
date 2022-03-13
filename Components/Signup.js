@@ -26,7 +26,7 @@ function Signup() {
                     cookie.set('name', res.data.name);
                     cookie.set('email', res.data.email);
                     cookie.set('phone', res.data.phone);
-                    Router.push("/Account");
+                    Router.push("/Profile");
                 }
             });
     }

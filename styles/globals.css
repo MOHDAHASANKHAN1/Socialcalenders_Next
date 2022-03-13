@@ -14,6 +14,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .sidebar{
   display: none;
   left: 0px;

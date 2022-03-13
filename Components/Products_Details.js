@@ -58,8 +58,7 @@ function Products_Details({ Detailes, Casu }) {
 
     useEffect(async () => {
         await axios
-            .get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Category&Category=${router.query.Product_Category}`)
-            // .get(`http://localhost:3000/api/Product?By=Category&Category=${router.query.Product_Category}`)
+            .get(`/api/Product?By=Category&Category=${router.query.Product_Category}`)
             .then((deta) => {
                 setDeta(deta.data.Product);
             });

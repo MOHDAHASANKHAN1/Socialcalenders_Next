@@ -1,12 +1,11 @@
-import Profile_Cmp from "../Components/Profile";
+import Messages_Cmp from "../Components/Messages";
 import { parseCookies } from 'nookies';
 import axios from "axios";
 import Loader from '../Components/Loader';
 import Router from 'next/router';
 import { useState } from "react";
 
-function Profile({ Profile_Detailes }) {
-
+function Message({ Messages }) {
     const Loding = () => {
         const [loading, setLoading] = useState(true);
 
@@ -19,7 +18,7 @@ function Profile({ Profile_Detailes }) {
         if (loading) {
             return (
                 <>
-                    <Profile_Cmp Detailes={Profile_Detailes} />
+                    <Messages_Cmp Messages={Messages} />
                 </>
             );
         } else {
@@ -40,24 +39,24 @@ function Profile({ Profile_Detailes }) {
 
 export async function getServerSideProps(ctx) {
 
-    const { id } = parseCookies(ctx);
+    const { User_Role } = parseCookies(ctx);
 
-    if (!id) {
+    if (User_Role !== "Admin") {
         const { res } = ctx
-        res.writeHead(302, { Location: "/Login" })
+        res.writeHead(302, { Location: "/" })
         res.end()
     }
 
     const Data = await
-        axios.get(`${process.env.Api_Base_Url}/api/User?id=${id}`);
+        axios.get(`${process.env.Api_Base_Url}/api/Messages`);
     // axios.get(`http://localhost:3000/api/User?id=${id}`);
 
     return {
         props: {
-            Profile_Detailes: Data.data.data
+            Messages: Data.data.data
         }
     }
 
 }
 
-export default Profile;
+export default Message;
