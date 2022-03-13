@@ -3,6 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 const responsive = {
     superLargeDesktop: {
@@ -34,7 +35,7 @@ function Best_Sellers() {
             .then((deta) => {
                 setData(deta.data.Category.Subcategory);
             });
-    }, [])
+    }, [useRouter()])
 
 
     return (

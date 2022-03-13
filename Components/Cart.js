@@ -193,7 +193,7 @@ function Cart_Cmp() {
             .then((deta) => {
                 setDeta(deta.data.Category.Subcategory);
             });
-    }, [])
+    }, [Router])
 
     return (
         <>
