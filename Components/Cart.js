@@ -189,11 +189,11 @@ function Cart_Cmp() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3000/api/Product?By=Category&Category=All`)
+            .get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Category&Category=All`)
             .then((deta) => {
                 setDeta(deta.data.Category.Subcategory);
             });
-    }, [Router])
+    }, [])
 
     return (
         <>

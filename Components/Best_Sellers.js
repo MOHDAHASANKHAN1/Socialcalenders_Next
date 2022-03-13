@@ -31,11 +31,11 @@ function Best_Sellers() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3000/api/Product?By=Category&Category=All`)
+            .get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Category&Category=All`)
             .then((deta) => {
                 setData(deta.data.Category.Subcategory);
             });
-    })
+    }, []);
 
 
     return (
