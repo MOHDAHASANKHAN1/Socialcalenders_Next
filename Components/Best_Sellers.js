@@ -32,10 +32,11 @@ function Best_Sellers() {
     useEffect(() => {
         axios
             .get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Category&Category=All`)
+            // .get(`http://localhost:3000/api/Product?By=Category&Category=All`)
             .then((deta) => {
-                setData(deta.data.Category.Subcategory);
+                setData(deta.data.Product);
             });
-    }, []);
+    }, [useRouter()]);
 
 
     return (
@@ -60,24 +61,20 @@ function Best_Sellers() {
             <Carousel responsive={responsive} className="py-4">
                 {
 
-                    data.map((datas) =>
-
-                        datas.Product.map((datass) =>
-                            <div className="px-3">
-                                <Link href={`/Product/All/${datas.name}/${datass.productpath}`} >
-                                    <a>
-                                        <div className="card card-sss d-flex align-items-center justify-content-center mx-1" >
-                                            <div className="img-wrapper-s"><img src={datass.image[0].url} className="d-block w-100" alt="..." /> </div>
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">{datass.tittle}</h5>
-                                                <h6 className="text-center text-muted"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${datass.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${datass.oprice}`}</span></h6>
-                                            </div>
+                    data.map((datass) =>
+                        <div className="px-3">
+                            <Link href={`/Product/All/${datass.subcatname}/${datass.Product.productpath}`} >
+                                <a>
+                                    <div className="card card-sss d-flex align-items-center justify-content-center mx-1" >
+                                        <div className="img-wrapper-s"><img src={datass.Product.image[0].url} className="d-block w-100" alt="..." /> </div>
+                                        <div className="card-body">
+                                            <h5 className="card-title text-center">{datass.Product.tittle}</h5>
+                                            <h6 className="text-center text-muted"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${datass.Product.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${datass.Product.oprice}`}</span></h6>
                                         </div>
-                                    </a>
-                                </Link>
-                            </div>
-                        )
-
+                                    </div>
+                                </a>
+                            </Link>
+                        </div>
                     )
 
                 }

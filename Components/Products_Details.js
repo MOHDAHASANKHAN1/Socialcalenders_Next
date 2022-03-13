@@ -56,18 +56,17 @@ function Products_Details({ Detailes, Casu }) {
     }
     const [deta, setDeta] = useState([]);
 
-    useEffect(() => {
-        axios
+    useEffect(async () => {
+        await axios
             .get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Category&Category=${router.query.Product_Category}`)
+            // .get(`http://localhost:3000/api/Product?By=Category&Category=${router.query.Product_Category}`)
             .then((deta) => {
-                setDeta(deta.data.Category.Subcategory);
+                setDeta(deta.data.Product);
             });
-
         $(".image-change").click(function () {
             $("#main-image").attr("src", $(this).attr("src"));
         });
-
-    }, []);
+    }, [router]);
 
     function DeleteAll(productpath, image, category, subcategory) {
 
@@ -617,24 +616,20 @@ function Products_Details({ Detailes, Casu }) {
                             <Carousel responsive={responsive} className="py-4">
                                 {
 
-                                    deta.map((datas) =>
-
-                                        datas.Product.map((data) =>
-                                            <div className="px-3">
-                                                <Link href={`/Product/${router.query.Product_Category}/${datas.name}/${data.productpath}`} >
-                                                    <a>
-                                                        <div className="card card-sss d-flex align-items-center justify-content-center mx-1" >
-                                                            <div className="img-wrapper-s"><img src={data.image[0].url} className="d-block w-100" alt="..." /> </div>
-                                                            <div className="card-body">
-                                                                <h5 className="card-title text-center">{data.tittle}</h5>
-                                                                <h6 className="text-center text-muted"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.oprice}`}</span></h6>
-                                                            </div>
+                                    deta.map((data) =>
+                                        <div className="px-3">
+                                            <Link href={`/Product/${data.catname}/${data.subcatname}/${data.Product.productpath}`} >
+                                                <a>
+                                                    <div className="card card-sss d-flex align-items-center justify-content-center mx-1" >
+                                                        <div className="img-wrapper-s"><img src={data.Product.image[0].url} className="d-block w-100" alt="..." /> </div>
+                                                        <div className="card-body">
+                                                            <h5 className="card-title text-center">{data.Product.tittle}</h5>
+                                                            <h6 className="text-center text-muted"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.oprice}`}</span></h6>
                                                         </div>
-                                                    </a>
-                                                </Link>
-                                            </div>
-                                        )
-
+                                                    </div>
+                                                </a>
+                                            </Link>
+                                        </div>
                                     )
 
                                 }

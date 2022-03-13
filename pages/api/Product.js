@@ -35,7 +35,7 @@ cloudinary.config({
 
 handler.get(async (req, res) => {
   const { By } = req.query;
-  let Cat, Subt, Subcat = [], Alen = 0, Tlen = 0, Clndlen = 0, Blen = 0, Elen = 0, Crslen = 0, Lmlen = 0, Clnglen = 0, Cvrslen = 0, Slen = 0;
+  let Products = [], Cat, Subcat = [], Alen = 0, Tlen = 0, Clndlen = 0, Blen = 0, Elen = 0, Crslen = 0, Lmlen = 0, Clnglen = 0, Cvrslen = 0, Slen = 0;
   switch (By) {
     case "Path":
       Product.findOne({ Category: req.query.Category }, async function (err, result) {
@@ -299,7 +299,13 @@ handler.get(async (req, res) => {
                   result.Subcategory.map((Sub) =>
                     Subcat.push({ name: Sub.name, len: Sub.Product.length })
                   )
-                  res.send({ message: "Found", Category: result, Countcat: Cat, Countsub: Subcat });
+                  result.Subcategory.map((datas) =>
+                    datas.Product.map((data) => {
+                      Products.push({ catname: result.Category, subcatname: datas.name, Product: data })
+                    }
+                    )
+                  )
+                  res.send({ message: "Found", Product: Products, Countcat: Cat, Countsub: Subcat });
                 }
               } else {
                 console.log(err)
@@ -363,11 +369,13 @@ handler.get(async (req, res) => {
                   result.Subcategory.map((Sub) => {
                     Subcat.push({ name: Sub.name, len: Sub.Product.length })
                     if (Sub.name === req.query.SubCategory) {
-                      Subt = Sub;
+                      Sub.Product.map((data) => {
+                        Products.push({ catname: result.Category, subcatname: Sub.name, Product: data })
+                      });
                     }
                   });
-                  if (Subt) {
-                    res.send({ message: "Found", Subcategory: { Category: req.query.Category, Subcategory: [Subt] }, Countcat: Cat, Countsub: Subcat });
+                  if (Products.length !== 0) {
+                    res.send({ message: "Found", Product: Products, Countcat: Cat, Countsub: Subcat });
                   } else {
                     res.send({ message: "Not Found" });
                   }

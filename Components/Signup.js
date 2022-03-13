@@ -19,7 +19,7 @@ function Signup() {
             .post('/api/Signup', data)
             .then((res) => {
                 alert(res.data.message);
-                if (res.data.message === "Successfully Registeruser") {
+                if (res.data.message === "Successfully Register") {
                     cookie.set('Token', res.data.Token);
                     cookie.set('User_Role', res.data.role);
                     cookie.set('id', res.data.id);

@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import Router, { useRouter } from "next/router";
 import Loader from './Loader';
 
-const Loding = ({ Category }) => {
+const Loding = ({ Product }) => {
     const dispatch = useDispatch();
     const router = useRouter();
     const [loading, setLoading] = useState(true);
@@ -39,45 +39,83 @@ const Loding = ({ Category }) => {
         setLoading(true);
     }
 
+    let [start, setStart] = useState(0);
+    let [end, setEnd] = useState(12);
+
     if (loading) {
         return (
             <>
                 {
 
-                    Category.Subcategory.map((datas) =>
+                    Product.slice(start, end).map((data) =>
 
-                        datas.Product.map((data) =>
-
-                            <div className="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4 py-5 d-flex align-items-center justify-content-center" key={1}>
-                                <div className={`card card-sss card-ss show `} id={data._id}>
-                                    <Link href={`/Product/${Category.Category}/${datas.name}/${data.productpath}`}>
-                                        <a>
-                                            <div className="d-flex align-items-center justify-content-center ">
-                                                <div className=" cards-s d-flex align-items-center justify-content-center ">
-                                                    <img src={data.image[0].url} className="card-img-top image-change" id={data.image.length !== 1 ? data.image[1].url : data.image[0].url} alt={data.image[0].url} />
-                                                </div>
+                        <div className="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4 py-5 d-flex align-items-center justify-content-center" key={1}>
+                            <div className={`card card-sss card-ss show `} id={data.Product._id}>
+                                <Link href={`/Product/${data.catname}/${data.subcatname}/${data.Product.productpath}`}>
+                                    <a>
+                                        <div className="d-flex align-items-center justify-content-center ">
+                                            <div className=" cards-s d-flex align-items-center justify-content-center ">
+                                                <img src={data.Product.image[0].url} className="card-img-top image-change" id={data.Product.image.length !== 1 ? data.Product.image[1].url : data.Product.image[0].url} alt={data.Product.image[0].url} />
                                             </div>
+                                        </div>
+                                    </a>
+                                </Link>
+                                <div className="d-grid gap-2">
+                                    <button className={`btn btn-dark ${data.Product._id}`} id="add" type="button" onClick={() => Add({ quantity: 1, url: data.Product.image[0].url, tittle: data.Product.tittle, oprice: parseFloat(data.Product.oprice), uprice: parseFloat(data.Product.oprice), productpath: data.Product.productpath, category: Category.Category, subcategory: datas.name })}><h5><b>Add To Cart</b></h5></button>
+                                </div>
+                                <div className="card-body">
+                                    <Link href={`/Product/${router.query.Category}/${data.Product.name}/${data.Product.productpath}`}>
+                                        <a>
+                                            <p className="text-muted text-center">Social Medial Calender</p>
+                                            <h5 className="card-title text-center">{data.Product.tittle}</h5>
+                                            <h6 className="text-center text-muted h6"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.oprice}`}</span></h6>
                                         </a>
                                     </Link>
-                                    <div className="d-grid gap-2">
-                                        <button className={`btn btn-dark ${data._id}`} id="add" type="button" onClick={() => Add({ quantity: 1, url: data.image[0].url, tittle: data.tittle, oprice: parseFloat(data.oprice), uprice: parseFloat(data.oprice), productpath: data.productpath, category: Category.Category, subcategory: datas.name })}><h5><b>Add To Cart</b></h5></button>
-                                    </div>
-                                    <div className="card-body">
-                                        <Link href={`/Product/${Category.Category}/${datas.name}/${data.productpath}`}>
-                                            <a>
-                                                <p className="text-muted text-center">Social Medial Calender</p>
-                                                <h5 className="card-title text-center">{data.tittle}</h5>
-                                                <h6 className="text-center text-muted h6"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.oprice}`}</span></h6>
-                                            </a>
-                                        </Link>
-                                    </div>
                                 </div>
-                            </div >
-                        )
-
+                            </div>
+                        </div >
                     )
-
                 }
+
+                <div className="d-flex align-items-center justify-content-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link btn" onClick={() => {
+                                    if (start !== 0 && end !== 12) {
+                                        setStart(start - 12), setEnd(end - 12)
+                                    }
+                                }} aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link btn" onClick={() => {
+                                if (Product.length >= 12) {
+                                    setStart(12), setEnd(24)
+                                }
+                            }}>1</a></li>
+                            <li class="page-item"><a class="page-link btn" onClick={() => {
+                                if (Product.length >= 24) {
+                                    setStart(24), setEnd(36)
+                                }
+                            }}>2</a></li>
+                            <li class="page-item"><a class="page-link btn" onClick={() => {
+                                if (Product.length >= 36) {
+                                    setStart(36), setEnd(48)
+                                }
+                            }}>3</a></li>
+                            <li class="page-item">
+                                <a class="page-link btn" onClick={() => {
+                                    if (Product.length >= end) {
+                                        setStart(start + 12), setEnd(end + 12)
+                                    }
+                                }} aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </>
         );
     } else {
@@ -89,7 +127,7 @@ const Loding = ({ Category }) => {
     }
 }
 
-function Product_Base({ Category, Countcat, Countsub }) {
+function Product_Base({ Product, Countcat, Countsub }) {
 
     const router = useRouter();
     useEffect(() => {
@@ -97,6 +135,8 @@ function Product_Base({ Category, Countcat, Countsub }) {
             $(`#sidebars`).toggle();
         });
     });
+
+    console.log(Countsub)
 
     return (
         <>
@@ -160,7 +200,7 @@ function Product_Base({ Category, Countcat, Countsub }) {
                 <div className="col-sm-9 com-md-9 col-12 col-lg-9">
 
                     <div className="row g-0">
-                        <Loding Category={Category} />
+                        <Loding Product={Product} />
                     </div>
 
                 </div>

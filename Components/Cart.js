@@ -190,10 +190,11 @@ function Cart_Cmp() {
     useEffect(() => {
         axios
             .get(`https://socialsmediacalendar.herokuapp.com/api/Product?By=Category&Category=All`)
+            // .get(`http://localhost:3000/api/Product?By=Category&Category=All`)
             .then((deta) => {
-                setDeta(deta.data.Category.Subcategory);
+                setDeta(deta.data.Product);
             });
-    }, [])
+    }, [Router])
 
     return (
         <>
@@ -249,24 +250,20 @@ function Cart_Cmp() {
                         <Carousel responsive={responsive} className="py-4">
                             {
 
-                                deta.map((datas) =>
-
-                                    datas.Product.map((data) =>
-                                        <div className="px-3">
-                                            <Link href={`/Product/All/${datas.name}/${data.productpath}`} >
-                                                <a>
-                                                    <div className="card card-sss d-flex align-items-center justify-content-center mx-1" >
-                                                        <div className="img-wrapper-s"><img src={data.image[0].url} className="d-block w-100" alt="..." /> </div>
-                                                        <div className="card-body">
-                                                            <h5 className="card-title text-center">{data.tittle}</h5>
-                                                            <h6 className="text-center text-muted"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.oprice}`}</span></h6>
-                                                        </div>
+                                deta.map((data) =>
+                                    <div className="px-3">
+                                        <Link href={`/Product/All/${data.subcatname}/${data.Product.productpath}`} >
+                                            <a>
+                                                <div className="card card-sss d-flex align-items-center justify-content-center mx-1" >
+                                                    <div className="img-wrapper-s"><img src={data.Product.image[0].url} className="d-block w-100" alt="..." /> </div>
+                                                    <div className="card-body">
+                                                        <h5 className="card-title text-center">{data.Product.tittle}</h5>
+                                                        <h6 className="text-center text-muted"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.oprice}`}</span></h6>
                                                     </div>
-                                                </a>
-                                            </Link>
-                                        </div>
-                                    )
-
+                                                </div>
+                                            </a>
+                                        </Link>
+                                    </div>
                                 )
 
                             }
@@ -278,40 +275,6 @@ function Cart_Cmp() {
                     :
 
                     <>
-                        <div className="container-fluid mt-100">
-                            <div className="row">
-                                <div className="col-md-12 p-4">
-                                    <div className="card">
-                                        <div className="card-header">
-                                            <h3 className="fw-normal mb-0 text-black ">Shopping Cart</h3>
-                                        </div>
-                                        <div className="card-body cart p-4">
-                                            <div className="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" className="img-fluid mb-4 mr-3" />
-                                                <h3><strong><b>Your Cart is Empty</b></strong></h3>
-                                                <h4>Add something to make me happy :)</h4> <p onClick={() => Router.push("/Products/All")} className="btn btn-primary cart-btn-transform m-3 p-3" data-abc="true"><b>CONTINUE SHOPPING <span><i className='fas fa-long-arrow-alt-right px-2'></i></span></b></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="container-fluid mt-100">
-                            <div className="row">
-                                <div className="col-md-12 p-4">
-                                    <div className="card">
-                                        <div className="card-header">
-                                            <h3 className="fw-normal mb-0 text-black ">Shopping Cart</h3>
-                                        </div>
-                                        <div className="card-body cart p-4">
-                                            <div className="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" className="img-fluid mb-4 mr-3" />
-                                                <h3><strong><b>Your Cart is Empty</b></strong></h3>
-                                                <h4>Add something to make me happy :)</h4> <p onClick={() => Router.push("/Products/All")} className="btn btn-primary cart-btn-transform m-3 p-3" data-abc="true"><b>CONTINUE SHOPPING <span><i className='fas fa-long-arrow-alt-right px-2'></i></span></b></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div className="container-fluid mt-100">
                             <div className="row">
                                 <div className="col-md-12 p-4">
