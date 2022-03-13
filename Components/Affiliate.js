@@ -15,12 +15,12 @@ function Affiliate() {
                 <p className='text-white text-center h5'><b>Earn 30-50% commission every time you make a sale</b></p>
                 <br />
                 <div className='d-flex justify-content-center'>
-                    <Link href="/Contact">
+                    <Link href="/Signup">
                         <a className="px-4">
                             <button type="button" className="btn btn-primary px-4 py-3 text-white"><b>SIGN IN</b></button>
                         </a>
                     </Link>
-                    <Link href="/Contact">
+                    <Link href="/Login">
                         <a className="px-4">
                             <button type="button" className="btn btn-info px-4 py-3 text-white"><b>LOGIN</b></button>
                         </a>
@@ -69,7 +69,7 @@ function Affiliate() {
                         <p className='text-center h1'>SIGN UP NOW AND YOU CAN START RIGHT AWAY</p>
                         <br />
                         <div className='d-flex justify-content-center'>
-                            <Link href="/Contact">
+                            <Link href="/Signup">
                                 <a className="px-4">
                                     <button type="button" className="btn btn-primary px-4 py-3 btn-lg text-white"><b>REGISTER AND START SELLING</b></button>
                                 </a>
@@ -176,7 +176,7 @@ function Affiliate() {
                     <p className='text-center h2'><b>... And Soon You Will Have Even Higher Commission.</b></p>
                     <br />
                     <div className='d-flex justify-content-center'>
-                        <Link href="/Contact">
+                        <Link href="/Signup">
                             <a className="px-4">
                                 <button type="button" className="btn btn-primary px-4 py-3 btn-lg text-white"><b>REGISTER AND START SELLING</b></button>
                             </a>
@@ -325,7 +325,7 @@ function Affiliate() {
                     <p className='text-center h2'><b>Sign In And Start Making Money!    </b></p>
                     <br />
                     <div className='d-flex justify-content-center'>
-                        <Link href="/Contact">
+                        <Link href="/Signup">
                             <a className="px-4">
                                 <button type="button" className="btn btn-primary px-4 py-3 btn-lg text-white"><b>REGISTER AND START SELLING</b></button>
                             </a>
