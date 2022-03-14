@@ -49,11 +49,11 @@ const Loding = ({ Product }) => {
 
                     Product.slice(start, end).map((data) =>
 
-                        <div className="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4 py-5 d-flex align-items-center justify-content-center" key={1}>
+                        <div className="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4 py-5 d-flex align-items-center justify-content-center px-3" key={1}>
                             <div className={`card card-sss card-ss show `} id={data.Product._id}>
                                 <Link href={`/Product/${data.catname}/${data.subcatname}/${data.Product.productpath}`}>
                                     <a>
-                                        <div className="d-flex align-items-center justify-content-center ">
+                                        <div className="d-flex align-items-center justify-content-center">
                                             <div className=" cards-s d-flex align-items-center justify-content-center ">
                                                 <img src={data.Product.image[0].url} className="card-img-top image-change" id={data.Product.image.length !== 1 ? data.Product.image[1].url : data.Product.image[0].url} alt={data.Product.image[0].url} />
                                             </div>
