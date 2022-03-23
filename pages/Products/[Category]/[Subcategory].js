@@ -1,11 +1,11 @@
 import Product_Base from "../../../Components/Product_Base";
 import axios from "axios";
 
-function Subcategory_M({ Product, Countcat, Countsub }) {
+function Subcategory_M({ Product, Countcat, Countsub, Catname, Subcatname }) {
 
     return (
         <>
-            <Product_Base Product={Product} Countcat={Countcat} Countsub={Countsub} />
+            <Product_Base Product={Product} Countcat={Countcat} Countsub={Countsub} Catname={Catname} Subcatname={Subcatname} />
         </>
     );
 }
@@ -27,7 +27,9 @@ export async function getServerSideProps(context) {
         props: {
             Product: Data.data.Product,
             Countcat: Data.data.Countcat,
-            Countsub: Data.data.Countsub
+            Countsub: Data.data.Countsub,
+            Catname: Data.data.catname,
+            Subcatname: Data.data.subcatname,
         }
     }
 
