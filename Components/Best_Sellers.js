@@ -61,14 +61,14 @@ function Best_Sellers() {
                 {
 
                     data.map((datass) =>
-                        <div className="px-3">
+                        <div key={1} className="px-3">
                             <Link href={`/Product/All/${datass.subcatname}/${datass.Product.productpath}`} >
                                 <a>
                                     <div className="card card-sss d-flex align-items-center justify-content-center mx-1" >
                                         <div className="img-wrapper-s"><img src={datass.Product.image[0].url} className="d-block w-100" alt="..." /> </div>
                                         <div className="card-body">
                                             <h5 className="card-title text-center">{datass.Product.tittle}</h5>
-                                            <h6 className="text-center text-muted"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${datass.Product.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${datass.Product.oprice}`}</span></h6>
+                                            <h6 className="text-center text-muted"><del><i className="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${datass.Product.cprice}`}</del><span className="text-danger px-2"><i className="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${datass.Product.oprice}`}</span></h6>
                                         </div>
                                     </div>
                                 </a>

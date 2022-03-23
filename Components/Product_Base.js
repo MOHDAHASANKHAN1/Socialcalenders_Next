@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import Router, { useRouter } from "next/router";
 import Loader from './Loader';
 
-const Loding = ({ Product }) => {
+const Loding = ({ Product, Catname, Subcatname }) => {
     const dispatch = useDispatch();
     const router = useRouter();
     const [loading, setLoading] = useState(true);
@@ -61,14 +61,14 @@ const Loding = ({ Product }) => {
                                     </a>
                                 </Link>
                                 <div className="d-grid gap-2">
-                                    <button className={`btn btn-dark ${data.Product._id}`} id="add" type="button" onClick={() => Add({ quantity: 1, url: data.Product.image[0].url, tittle: data.Product.tittle, oprice: parseFloat(data.Product.oprice), uprice: parseFloat(data.Product.oprice), productpath: data.Product.productpath, category: Category.Category, subcategory: datas.name })}><h5><b>Add To Cart</b></h5></button>
+                                    <button className={`btn btn-dark ${data.Product._id}`} id="add" type="button" onClick={() => Add({ quantity: 1, url: data.Product.image[0].url, tittle: data.Product.tittle, oprice: parseFloat(data.Product.oprice), uprice: parseFloat(data.Product.oprice), productpath: data.Product.productpath, category: Catname, subcategory: Subcatname })}><h5><b>Add To Cart</b></h5></button>
                                 </div>
                                 <div className="card-body">
                                     <Link href={`/Product/${router.query.Category}/${data.Product.name}/${data.Product.productpath}`}>
                                         <a>
                                             <p className="text-muted text-center">Social Medial Calender</p>
                                             <h5 className="card-title text-center">{data.Product.tittle}</h5>
-                                            <h6 className="text-center text-muted h6"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.oprice}`}</span></h6>
+                                            <h6 className="text-center text-muted h6"><del><i className="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.cprice}`}</del><span className="text-danger px-2"><i className="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.oprice}`}</span></h6>
                                         </a>
                                     </Link>
                                 </div>
@@ -79,9 +79,9 @@ const Loding = ({ Product }) => {
 
                 <div className="d-flex align-items-center justify-content-center">
                     <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link btn" onClick={() => {
+                        <ul className="pagination">
+                            <li className="page-item">
+                                <a className="page-link btn" onClick={() => {
                                     if (start !== 0 && end !== 12) {
                                         setStart(start - 12), setEnd(end - 12)
                                     }
@@ -89,23 +89,23 @@ const Loding = ({ Product }) => {
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
                             </li>
-                            <li class="page-item"><a class="page-link btn" onClick={() => {
+                            <li className="page-item"><a className="page-link btn" onClick={() => {
                                 if (Product.length >= 12) {
                                     setStart(12), setEnd(24)
                                 }
                             }}>1</a></li>
-                            <li class="page-item"><a class="page-link btn" onClick={() => {
+                            <li className="page-item"><a className="page-link btn" onClick={() => {
                                 if (Product.length >= 24) {
                                     setStart(24), setEnd(36)
                                 }
                             }}>2</a></li>
-                            <li class="page-item"><a class="page-link btn" onClick={() => {
+                            <li className="page-item"><a className="page-link btn" onClick={() => {
                                 if (Product.length >= 36) {
                                     setStart(36), setEnd(48)
                                 }
                             }}>3</a></li>
-                            <li class="page-item">
-                                <a class="page-link btn" onClick={() => {
+                            <li className="page-item">
+                                <a className="page-link btn" onClick={() => {
                                     if (Product.length >= end) {
                                         setStart(start + 12), setEnd(end + 12)
                                     }
@@ -127,7 +127,7 @@ const Loding = ({ Product }) => {
     }
 }
 
-function Product_Base({ Product, Countcat, Countsub }) {
+function Product_Base({ Product, Countcat, Countsub, Catname, Subcatname }) {
 
     const router = useRouter();
     useEffect(() => {
@@ -160,7 +160,7 @@ function Product_Base({ Product, Countcat, Countsub }) {
                                 <h2 className='text-dark'><b>Products</b></h2>
                                 {
                                     Countcat.map((cate) =>
-                                        <div className="row g-0">
+                                        <div key={1} className="row g-0">
                                             <div className="col-sm-11 col-10 d-flex align-items-center justify-content-start">
                                                 <Link passHref href={`/Products/${cate.value}`} className='nav-link px-0' key={1}><a><h5 className='topics'>{cate.name}</h5></a></Link>
                                             </div>
@@ -178,7 +178,7 @@ function Product_Base({ Product, Countcat, Countsub }) {
                                         <div className="pb-4">
                                             {
                                                 Countsub.map((data) =>
-                                                    <div className="row g-0">
+                                                    <div key={1} className="row g-0">
                                                         <div className="col-sm-11 col-10 d-flex align-items-center justify-content-start">
                                                             <Link passHref href={`/Products/${router.query.Category}/${data.name}`} className='nav-link px-0' key={1}><a><h5 className='topics'>{data.name}</h5></a></Link>
                                                         </div>
@@ -200,7 +200,7 @@ function Product_Base({ Product, Countcat, Countsub }) {
                 <div className="col-sm-9 com-md-9 col-12 col-lg-9">
 
                     <div className="row g-0">
-                        <Loding Product={Product} />
+                        <Loding Product={Product} Catname={Catname} Subcatname={Subcatname} />
                     </div>
 
                 </div>
@@ -218,7 +218,7 @@ function Product_Base({ Product, Countcat, Countsub }) {
                                         <div className="pb-4">
                                             {
                                                 Countcat.map((cate) =>
-                                                    <div className="row g-0">
+                                                    <div key={1} className="row g-0">
                                                         <div className="col-sm-11 col-10 d-flex align-items-center justify-content-start">
                                                             <Link passHref href={`/Products/${cate.value}`} className='nav-link px-0' key={1}><a><h5 className='topics'>{cate.name}</h5></a></Link>
                                                         </div>
@@ -241,7 +241,7 @@ function Product_Base({ Product, Countcat, Countsub }) {
                                     <div className="pb-4">
                                         {
                                             Countsub.map((data) =>
-                                                <div className="row g-0">
+                                                <div key={1} className="row g-0">
                                                     <div className="col-sm-11 col-10 d-flex align-items-center justify-content-start">
                                                         <Link passHref href={`/Products/${router.query.Category}/${data.name}`} className='nav-link px-0' key={1}><a><h5 className='topics'>{data.name}</h5></a></Link>
                                                     </div>

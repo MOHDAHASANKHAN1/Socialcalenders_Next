@@ -145,7 +145,7 @@ function Cart_Cmp() {
                             </button>
                         </div>
                         <div className="col-md-2 col-lg-2 col-xl-2 offset-lg-1">
-                            <h5 className="mb-0">  <i class="fa-solid fa-indian-rupee-sign"></i> {`${data.uprice}`}</h5>
+                            <h5 className="mb-0">  <i className="fa-solid fa-indian-rupee-sign"></i> {`${data.uprice}`}</h5>
                         </div>
 
                         <div className="col-md-1 col-lg-1 col-xl-1 text-center">
@@ -231,7 +231,7 @@ function Cart_Cmp() {
                                                         <button type="button" className="btn btn-warning btn-block btn-lg" onClick={() => makePayment()} ><b>Proceed to Pay</b></button>
                                                     </div>
                                                     <div className=" col-sm-6 col-6 d-flex align-items-center justify-content-end">
-                                                        <span className="mb-0 h5 text-info">Total <i class="fa-solid fa-indian-rupee-sign"></i> {Totalprice}</span>
+                                                        <span className="mb-0 h5 text-info">Total <i className="fa-solid fa-indian-rupee-sign"></i> {Totalprice}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -250,14 +250,14 @@ function Cart_Cmp() {
                             {
 
                                 deta.map((data) =>
-                                    <div className="px-3">
+                                    <div key={1} className="px-3">
                                         <Link href={`/Product/All/${data.subcatname}/${data.Product.productpath}`} >
                                             <a>
                                                 <div className="card card-sss d-flex align-items-center justify-content-center mx-1" >
                                                     <div className="img-wrapper-s"><img src={data.Product.image[0].url} className="d-block w-100" alt="..." /> </div>
                                                     <div className="card-body">
                                                         <h5 className="card-title text-center">{data.Product.tittle}</h5>
-                                                        <h6 className="text-center text-muted"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.oprice}`}</span></h6>
+                                                        <h6 className="text-center text-muted"><del><i className="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.cprice}`}</del><span className="text-danger px-2"><i className="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.oprice}`}</span></h6>
                                                     </div>
                                                 </div>
                                             </a>

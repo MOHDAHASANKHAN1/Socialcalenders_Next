@@ -166,7 +166,7 @@ function Products_Details({ Detailes, Casu }) {
                                                 User_Role === "Admin" ?
                                                     <>
                                                         <div className="col-sm-12 d-flex align-items-center justify-content-center" key={1}>
-                                                            <div className="btn w-50 text-center border border-primary rounded-3" onClick={() => router.push(`/Add-Product-Image/${Casu.Cat}/${Casu.Sub}/${Product.productpath}`)}><i class="text center fa fa-plus" aria-hidden="true"></i></div>
+                                                            <div className="btn w-50 text-center border border-primary rounded-3" onClick={() => router.push(`/Add-Product-Image/${Casu.Cat}/${Casu.Sub}/${Product.productpath}`)}><i className="text center fa fa-plus" aria-hidden="true"></i></div>
                                                         </div>
                                                     </>
                                                     :
@@ -210,7 +210,7 @@ function Products_Details({ Detailes, Casu }) {
                                         </fieldset>
                                         <h6 className="text-muted p-1">No Reviews</h6>
                                     </div>
-                                    <h6 className="h5 text-muted"><del><i class="fa-solid h6 fa-indian-rupee-sign"></i>{`${Product.cprice}`}</del><span className="h4 text-dark px-2"><i class="fa-solid h5 fa-indian-rupee-sign"></i>{`${Product.oprice}`}</span><span className="h5 text-white rounded-2 bg-success px-3"><b>{`${parseInt(discount)}% OFF`}</b></span></h6>
+                                    <h6 className="h5 text-muted"><del><i className="fa-solid h6 fa-indian-rupee-sign"></i>{`${Product.cprice}`}</del><span className="h4 text-dark px-2"><i className="fa-solid h5 fa-indian-rupee-sign"></i>{`${Product.oprice}`}</span><span className="h5 text-white rounded-2 bg-success px-3"><b>{`${parseInt(discount)}% OFF`}</b></span></h6>
                                     <br />
 
                                     {Parser(Product.description)}
@@ -616,14 +616,14 @@ function Products_Details({ Detailes, Casu }) {
                                 {
 
                                     deta.map((data) =>
-                                        <div className="px-3">
+                                        <div key={1} className="px-3">
                                             <Link href={`/Product/${data.catname}/${data.subcatname}/${data.Product.productpath}`} >
                                                 <a>
                                                     <div className="card card-sss d-flex align-items-center justify-content-center mx-1" >
                                                         <div className="img-wrapper-s"><img src={data.Product.image[0].url} className="d-block w-100" alt="..." /> </div>
                                                         <div className="card-body">
                                                             <h5 className="card-title text-center">{data.Product.tittle}</h5>
-                                                            <h6 className="text-center text-muted"><del><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.cprice}`}</del><span className="text-danger px-2"><i class="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.oprice}`}</span></h6>
+                                                            <h6 className="text-center text-muted"><del><i className="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.cprice}`}</del><span className="text-danger px-2"><i className="fa-solid fa-indian-rupee-sign" style={{ fontSize: "0.9rem" }}></i>{`${data.Product.oprice}`}</span></h6>
                                                         </div>
                                                     </div>
                                                 </a>
