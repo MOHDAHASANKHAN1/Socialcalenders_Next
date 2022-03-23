@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import Router, { useRouter } from "next/router";
 import Loader from './Loader';
 
-const Loding = ({ Product, Catname, Subcatname }) => {
+const Loding = ({ Product }) => {
     const dispatch = useDispatch();
     const router = useRouter();
     const [loading, setLoading] = useState(true);
@@ -61,7 +61,7 @@ const Loding = ({ Product, Catname, Subcatname }) => {
                                     </a>
                                 </Link>
                                 <div className="d-grid gap-2">
-                                    <button className={`btn btn-dark ${data.Product._id}`} id="add" type="button" onClick={() => Add({ quantity: 1, url: data.Product.image[0].url, tittle: data.Product.tittle, oprice: parseFloat(data.Product.oprice), uprice: parseFloat(data.Product.oprice), productpath: data.Product.productpath, category: Catname, subcategory: Subcatname })}><h5><b>Add To Cart</b></h5></button>
+                                    <button className={`btn btn-dark ${data.Product._id}`} id="add" type="button" onClick={() => Add({ quantity: 1, url: data.Product.image[0].url, tittle: data.Product.tittle, oprice: parseFloat(data.Product.oprice), uprice: parseFloat(data.Product.oprice), productpath: data.Product.productpath, category: data.catname, subcategory: data.subcatname })}><h5><b>Add To Cart</b></h5></button>
                                 </div>
                                 <div className="card-body">
                                     <Link href={`/Product/${router.query.Category}/${data.Product.name}/${data.Product.productpath}`}>
@@ -127,7 +127,7 @@ const Loding = ({ Product, Catname, Subcatname }) => {
     }
 }
 
-function Product_Base({ Product, Countcat, Countsub, Catname, Subcatname }) {
+function Product_Base({ Product, Countcat, Countsub }) {
 
     const router = useRouter();
     useEffect(() => {
@@ -200,7 +200,7 @@ function Product_Base({ Product, Countcat, Countsub, Catname, Subcatname }) {
                 <div className="col-sm-9 com-md-9 col-12 col-lg-9">
 
                     <div className="row g-0">
-                        <Loding Product={Product} Catname={Catname} Subcatname={Subcatname} />
+                        <Loding Product={Product} />
                     </div>
 
                 </div>
