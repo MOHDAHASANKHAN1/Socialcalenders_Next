@@ -57,6 +57,8 @@ In this project there are some major and minor modules:
 - Admin: can change password.
 - Admin: can logout.
 
+## Screenshots
+![Projectimg2](https://user-images.githubusercontent.com/95666818/213902627-162218bb-eb8f-41da-a0b0-3cbc2e9ebc4b.jpg)
 
 
 ## Authors
