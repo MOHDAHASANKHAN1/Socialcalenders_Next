@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Social Media Calenders
+## Purpose of the Project:
+Aim of this project to allows people to buy and sell
+physical goods, services, and digital products over the internet 
+rather than at a brick-and-mortar location. Through an e-commerce 
+website, a business can process orders, accept payments, manage 
+shipping and logistics, and provide customer service.
+## Features of the Project:
+- Login/Signup User Account
+- Update Profile/Password User Account
+- Reset Password Mail using Sendgrid
+- Cart Add/Remove Items | Update Quantities
+- Save For Later Add/Remove Items
+- Wishlist Add/Remove Items
+- Products Pagination (Default 12 Products Per Page)
+- Product Search
+- Product Filters Based on Category/Ratings | Price Range
+- Shipping Info in Session Storage
+- My Orders (With All Filters)
+- Order Details of All Ordered Item
+- Users will receive mail when order placed with all details
+- Review Products User Account
+- Admin: Dashboard access to only admin roles
+- Admin: Update Order Status | Delete Order
+- Admin: Add/Update Products
+- Admin: Update User Data | Delete User
+- Admin: List Review of Product | Delete Review
+- Stock Management: Decrease stock of product when shipped
+## Modules of the Project:
+In this project there are some major and minor modules:
+- Customer Module
+- Admin Module
+- Orders Module
+- Affiliate Module
+- Profile Module
+- Categories Module
 
-## Getting Started
+#### Features of Customer Module:
+- Customer can register.
+- Customer can login.
+- customer can Cart Add/Remove Items | Update Quantities
+- customer can Save For Later Add/Remove Items
+- customer can Wishlist Add/Remove Items
+- Customer can give feedback.
+- Customer can view profile.
+- Customer can update profile.
+- Customer can change password.
+- Customer can logout
 
-First, run the development server:
+#### Features of Admin Module:
+- Admin: can login.
+- Admin: Dashboard access to only admin roles
+- Admin: Update Order Status | Delete Order
+- Admin: Add/Update Products
+- Admin: Update User Data | Delete User
+- Admin: List Review of Product | Delete Review
+- Admin: can change password.
+- Admin: can logout.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Authors
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [@Mohd Ahasan Khan](https://github.com/MOHDAHASANKHAN1)
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://portfolio-ahasan.vercel.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohd-ahasan-khan-0240b5205/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/MoAhsanKhan5)
